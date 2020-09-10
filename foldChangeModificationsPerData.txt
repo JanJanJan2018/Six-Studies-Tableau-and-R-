@@ -1,0 +1,42 @@
+
+RA_data_fcs.csv,Fold change modified for RA as:
+
+ctrlTrt2$RA_trtHealthy_foldChange <- ifelse(ctrlTrt2$trt_RA_Mean_abatacept/ctrlTrt2$ctrl_RA_Mean=='Inf',
+        1+ctrlTrt2$trt_RA_Mean_abatacept,
+ifelse(ctrlTrt2$trt_RA_Mean_abatacept/ctrlTrt2$ctrl_RA_Mean=='NaN',
+       1,
+ifelse(ctrlTrt2$trt_RA_Mean_abatacept/ctrlTrt2$ctrl_RA_Mean <= 0,
+       1-ctrlTrt2$ctrl_RA_Mean,
+       ctrlTrt2$trt_RA_Mean_abatacept/ctrlTrt2$ctrl_RA_Mean))) 
+
+
+
+DATA_FCs_GSE152418_covid19.csv, COVID19 modified FCs:
+
+DATA$mod_health_foldChange <- ifelse(DATA$mod_health_foldChange=='Inf',
+                                          DATA$moderate_mean, ifelse(DATA$mod_health_foldChange=='NaN', 1, ifelse(DATA$mod_health_foldChange==0, 1-DATA$healthy_mean,
+             DATA$mod_health_foldChange)))
+
+DATA$sevr_health_foldChange <- ifelse(DATA$sevr_health_foldChange=='Inf',
+        DATA$severe_mean, ifelse(DATA$sevr_health_foldChange=='NaN',  1,
+     ifelse(DATA$sevr_health_foldChange==0,1-DATA$healthy_mean,
+            DATA$sevr_health_foldChange)))
+
+DATA$ICU_health_foldChange <- ifelse(DATA$ICU_health_foldChange=='Inf',
+   DATA$ICU_mean, ifelse(DATA$ICU_health_foldChange=='NaN', 1,
+   ifelse(DATA$ICU_health_foldChange==0, 1-DATA$healthy_mean,
+          DATA$ICU_health_foldChange)))
+
+
+LymeDisease_log2norm.csv doesn't have the FCs added to it
+
+allRawDataCombinedGSE135223_UC_CD.csv has the following FCs:
+
+Also, no FCs in the above UC and CD data.
+
+UL_studyGSE120854_fCs.csv used the regular FC of disease/healthy with no zeros in the means to modify FCs. The gene counts were added to this data for the CNVs of each gene.
+
+
+
+
+

@@ -1,0 +1,683 @@
+---
+title: "Uterine Leiomyoma GSE128242 15 women ECM, COL4A5, COL4A6, and MED12"
+author: "Janis Corona"
+date: "9/9/2020"
+output: html_document
+---
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the interest of my personal time, AKA being lazy to get to the point,
+here is the basis of this analysis. I want to add the MeD12, COL4A5, COL4A6, HMGA2, and ECM or extracellular matrix genes from genecards.org to our developed body systems genes used in previous analysis of COVID-19, Ulcerative Colitis, Crohn's Disease, and Rheumatoid Arthritis. This analysis is on uterine leiomyomas or ULs that impact many females and are responsible for 30% of all hysterectomies, as well as other discomforts by women. They are benign tumors and this study, explores the extracellular matrix or ECM genes and collagen genes and hormone genes of a certain type of UL in women. There were 15 women who were filtered from various hysterectomy samples that took a matched healty myometrium sample with a diseased state tissue sample of UL, but they specifically had a mutation in a transcription process of the 2nd exon among other specifications to do this study. The details in the referenced gene summary and article it refers to are below.
+
+
+"In this study, freshly procured tissue samples from women who
+have undergone hysterectomies as a course of treatment for uterine
+leiomyomas, confirmed to have a glycine-to-aspartate (G44D) or
+glycine-to-serine (G44S) substitution in exon 2 of MED12, are used
+to characterize epigenetic changes in the disease. Adjacent, nondiseased
+areas of the myometrium from the same patients are also
+collected to represent normal (wild-type [WT]) samples. In an
+effort to avoid artifactual alterations to the transcriptomic and
+epigenomic profiles of patient samples, gene expression profiling by
+RNA-sequencing (RNA-seq) as well as epigenetic profiling by highresolution
+chromatin immunoprecipitation-sequencing (ChIP-seq)
+and promoter capture Hi-C are performed directly from tissue
+samples with minimal processing. Our integrative analysis of transcriptomic
+and epigenetic changes, highlighted by the near-native
+characterization of long-range promoter interactions in uterine
+fibroids, identifies differential transcription factor occupancy, differential
+enhancer engagement, and altered enhancer-promoter
+contacts as key events that drive gene dysregulation in leiomyomas.
+Results
+Transcriptome profiling of fibroids. We used RNA isolation
+followed by massively parallel sequencing (RNA-seq) to examine
+the transcriptome profiles of normal myometrium (WT) and
+matched leiomyoma (G44D/S) tissue obtained from 15 women. A
+high degree of similarity between biological replicates of myometrium
+transcriptome profiles was seen, with a similar observation
+among biological replicates of leiomyoma tissue samples.
+Hierarchical clustering of all RNA-seq datasets highlights clustering
+primarily by disease state (Fig. 1a). Significantly, principal
+component analysis of the most variable genes revealed that 43%
+of the variance (PC1) is explained by the disease state, with
+biological replicates co-segregating based on tissue type (Fig. 1b).
+This suggests that the changes in gene expression between normal
+and MED12 mutant disease tissue types are primarily attributable
+to biological pathways that are important for the" -- GSE128242 NCBI study from the article associated with this study:
+
+Series GSE128242		Query DataSets for GSE128242
+Status	Public on Jan 01, 2020
+Title	Altered chromatin landscape and enhancer engagement underlie transcriptional dysregulation in MED12 mutant uterine leiomyomas
+Organism	Homo sapiens
+Experiment type	Expression profiling by high throughput sequencing
+Genome binding/occupancy profiling by high throughput sequencing
+Other
+Summary	This SuperSeries is composed of the SubSeries listed below.
+ 	
+Overall design	Refer to individual Series
+ 	
+Citation(s)	
+Moyo MB, Parker JB, Chakravarti D. Altered chromatin landscape and enhancer engagement underlie transcriptional dysregulation in MED12 mutant uterine leiomyomas. Nat Commun 2020 Feb 24;11(1):1019. PMID: 32094355
+Submission date	Mar 13, 2019
+Last update date	Mar 09, 2020
+Contact name	Debabrata Chakravarti
+E-mail(s)	debu@northwestern.edu
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Lets use our functions for gathering the genecards.org genes related to the above mentioned genes of the ECM, COL4A5, COL4A6, MED12, and HMGA2.
+```{r}
+library(dplyr)
+library(tidyr)
+```
+
+```{r,eval=F}
+source('geneCards2.R')
+```
+
+
+```{r,eval=F}
+bodySystemGenes <- read.csv('bodySystemGenes.csv')
+head(bodySystemGenes)
+```
+
+Lets just keep the first 5 features. The other features are from an Ulcerative Colitis and Crohn's Disease analysis in GSE135223. 
+```{r,eval=F}
+BS1 <- bodySystemGenes[,1:5]
+```
+
+```{r,eval=F}
+find25genes('ECM')
+find25genes('hormone')
+find25genes('collagen')
+find25genes('transcription')
+
+```
+
+```{r,eval=F}
+getProteinGenes('ECM')
+getProteinGenes('hormone')
+getProteinGenes('collagen')
+getProteinGenes('transcription')
+
+```
+
+```{r,eval=F}
+ecm <- read.csv("Top25ecms.csv")
+collagen <- read.csv("Top25hormones.csv")
+hormone <- read.csv("Top25collagens.csv")
+transcription <- read.csv("Top25transcriptions.csv")
+
+```
+
+```{r,eval=F}
+for (i in ecm$proteinType){
+  getSummaries2(i,'ECM')
+}
+
+for (i in collagen$proteinType){
+  getSummaries2(i,'collagen')
+}
+
+for (i in hormone$proteinType){
+  getSummaries2(i,'hormone')
+}
+
+for (i in transcription$proteinType){
+  getSummaries2(i,'transcription')
+}
+```
+
+```{r,eval=F}
+find25genes('HMGA2')
+find25genes('MED12')
+find25genes('COL4A6')
+find25genes('COL4A5')
+```
+ 
+
+```{r,eval=F}
+hmga2 <- read.csv("Top25hmga2s.csv")
+med12 <- read.csv('Top25med12s.csv')
+col4a5 <- read.csv('Top25col4a5s.csv')
+col4a6 <- read.csv('Top25col4a6s.csv')
+```
+
+```{r,eval=F}
+for (i in hmga2$proteinType){
+  getSummaries2(i,'hmga2')
+}
+
+for (i in med12$proteinType){
+  getSummaries2(i,'med12')
+}
+
+for (i in col4a5$proteinType){
+  getSummaries2(i, 'col4a5')
+}
+
+for (i in col4a6$proteinType){
+  getSummaries2(i,'col4a6')
+}
+
+```
+
+```{r,eval=F}
+getGeneSummaries('ECM')
+getGeneSummaries('collagen')
+getGeneSummaries('hormone')
+getGeneSummaries('transcription')
+getGeneSummaries('HMGA2')
+getGeneSummaries('MED12')
+getGeneSummaries('COL4A5')
+getGeneSummaries('COL4A6')
+```
+
+```{r,eval=F}
+transcriptionSumms <- read.csv("proteinGeneSummaries_transcription.csv")
+hormoneSumms <- read.csv("proteinGeneSummaries_hormone.csv")
+collagenSumms <- read.csv("proteinGeneSummaries_collagen.csv")
+ecmSumms <- read.csv("proteinGeneSummaries_ecm.csv")
+med12Summs <- read.csv("proteinGeneSummaries_med12.csv")
+col4a5Summs <- read.csv("proteinGeneSummaries_col4a5.csv")
+col4a6Summs <- read.csv("proteinGeneSummaries_col4a6.csv")
+hmga2Summs <- read.csv("proteinGeneSummaries_hmga2.csv")
+
+
+```
+
+```{r,eval=F}
+newSumms <- rbind(transcriptionSumms,hormoneSumms,
+                  collagenSumms,ecmSumms,
+                  med12Summs,col4a5Summs,col4a6Summs,
+                  hmga2Summs)
+colnames(newSumms)
+NS <- newSumms[,c(2,1,4:6)]
+
+bodySystems2 <- rbind(BS1,NS)
+```
+
+```{r,eval=F}
+write.csv(bodySystems2,'bodySystems2.csv',row.names=F)
+```
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+We now have our genes that we are going to be working with. The other genes only use the top 3 ranked genes related to those systems of the body, but these new additions related to UL and this study resource have 25 top ranked genes for each of our 8 gene systems related to collagen, hormones, transcription, and the extracellular matrix. There are a few duplicates, of COL4A5 and one other that were researched for top genes, because they weren't the top 3 ranked genes of those other mentioned body system genes, and some weren't even the top25 ranked genes for those body systems like COL4A6 and HMGA2. Lets clean out our environment in Rstudio and read in our new body system genes.
+```{r}
+bodySystems2 <- read.csv('bodySystems2.csv',stringsAsFactors = T)
+
+```
+
+Lets now read in our UL data from GSE128242
+```{r}
+UL <- read.delim('GSE128229_RNA_Tissue_DESeq2.txt',sep='\t',header=T)
+```
+
+
+```{r}
+DF <- merge(bodySystems2,UL,by.x='gene',by.y='symbol')
+```
+
+```{r}
+head(DF)
+```
+
+```{r}
+colnames(DF) <- gsub('GeneID','EnsemblID',colnames(DF))
+colnames(DF) <- gsub('entrez','EntrezID',colnames(DF))
+colnames(DF)
+```
+
+
+```{r}
+bodySystems3 <- DF[,c(1:6,13)]
+bs3 <- bodySystems3[!duplicated(bodySystems3),]
+
+write.csv(bs3,'bodySystems3.csv',row.names=F)
+```
+
+
+```{r}
+DF2 <- DF[!duplicated(DF),c(1:6,14:43)]
+row.names(DF2) <- NULL
+```
+
+
+```{r}
+head(DF2)
+```
+
+These are matched samples and the last alphanumeric identifier tag matches the 'MYO' with the 'LEIO' samples from matched uterus samples from hysterectomies. We will shorten the tag ID to 1-15 instead of PT728-PTc57.They are in order already and not mismatched.
+```{r}
+colnames(DF2)
+```
+
+```{r}
+DF3 <- DF2
+names <- c(paste(rep('healthy',15),1:15,sep='_'),
+           paste(rep('leiomyoma',15),1:15,sep='_'))
+colnames(DF3)[7:36] <- names
+colnames(DF3)
+```
+
+
+```{r}
+DF4 <- DF3 %>% group_by(gene) %>% count(gene)
+
+colnames(DF4)[2] <- 'geneCounts_GSE128242'
+
+```
+
+```{r}
+DF5 <- DF3 %>% group_by(gene) %>% summarise_at(vars('healthy_1':'leiomyoma_15'),mean)
+
+DF5$healthyMean <- apply(DF5[,2:16],1,mean)
+DF5$leiomyomaMean <- apply(DF5[,17:31],1,mean)
+DF5$LEIO_Healthy_foldChange <- ifelse(DF5$leiomyomaMean/DF5$healthyMean=='Inf',
+  1+DF5$leiomyomaMean,
+ifelse(DF5$leiomyomaMean/DF5$healthyMean=='NaN',1,
+ifelse(DF5$leiomyomaMean/DF5$healthyMean<=0,
+  1-DF5$healthyMean,DF5$leiomyomaMean/DF5$healthyMean)))
+head(DF5)
+```
+
+
+```{r}
+DF6 <- merge(bs3,DF4,by.x='gene',by.y='gene')
+```
+
+
+```{r}
+DF7 <- merge(DF6,DF5,by.x='gene',by.y='gene')
+```
+
+```{r}
+colnames(DF7)
+```
+
+```{r}
+head(DF7)
+```
+
+```{r}
+DF8 <- gather(DF7,key='sample',value='sampleValue',9:38)
+ul <- grep('leio',DF8$sample)
+healthy <- grep('healthy',DF8$sample)
+DF8$group <- 'group'
+DF8[ul,14] <- 'leiomyoma'
+DF8[healthy,14] <- 'healthy myo'
+unique(DF8$group)
+```
+
+
+```{r}
+head(DF8)
+```
+
+
+```{r,eval=F}
+write.csv(DF8,'UL_FCs_systemGenes.csv',row.names=F)
+```
+
+
+What would be great, would be to combine these genes and the UL data or uterine leiomyoma data of this study with another UL study, the COVID-19 study, the Rheumatoid Arthritis study, and the ulcerative colitis and Crohn's disease. We will do this and then make an interactive Tableau dashboard that will allow for selecting the body system, gene, and disease values to see the fold change, mean values per group comparison of healthy and diseased or treated, and the individual sample values in that disease study groups. Some names of columns will have to be changed so that instead of a merge we row bind the needed fields together and drop unneeded ones like the gene counts per gene of that particular study when dealing with copy number variants we didn't show. Or we can add it in to those studies that didn't have it added. The body system genes we now have should be added to the orginal data of those studies as we bring the larger data of each study into this analysis.
+
+I emptied out the environment and want to read in all of our data we want to combine. We have variations on the fold change values from each study if there are any fold change values added to the data. Also, the Lyme disease study has log2 normalized data that is probably quantile normalized, hence the negative values, but I want positive values, so I am going to take every value in that data and raise it as an exponent of base 2, so that they are positive, and log2 is done after normalization, so it is closer to the raw values. Some of the data also has the copy number variants of genes as the disease study gene counts of genes. Lets read in all our data first, then look at the differences.
+```{r}
+UL_study1 <- read.csv('UL_studyGSE120854_fCs.csv',
+                      sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+UL_study2 <- read.csv('UL_FCs_systemGenes.csv',
+                      sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+UC_CD <- read.csv('allRawDataCombinedGSE135223_UC_CD.csv',
+                      sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+LymeDisease <- read.csv('LymeDisease_log2norm.csv',
+                        sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+RA <- read.csv('RA_data_fcs.csv',
+               sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+covid19 <- read.csv('DATA_FCs_GSE152418_covid19.csv',
+                    sep=',',
+                      header=T, na.strings=c('',' ','NA'),
+                      stringsAsFactors = T)
+
+```
+
+The RA and both UL studys have gene counts, but the COVID19 doesn't because each gene only had one version of itself, and also doesn't have the gene counts column. This was verified by going back to the script that made that file v3 of the original and grouping by the ENSEMBLID to get the count and seeing the only value was 1 and the number of genes was the same as the number of genes in total. The Lyme disease data hasn't had any aggregate sums done to it, because it still needs to all be converted to having each value the power of base 2 to reverse the log2 and make all values positive. The Ulcerative Colitis and Crohns disease data doesn't have the gene counts of its data set, but also there weren't any aggregations done to this data, so we can get the gene counts of the UC_CD, LymeDisease, and covid19 data sets in this script.
+
+```{r}
+cv19 <- covid19 %>% group_by(ENSEMBLID) %>% count(ENSEMBLID)
+colnames(cv19)[2] <- 'cv19_geneCount'
+
+covid19b <- merge(cv19,covid19,by.x='ENSEMBLID',by.y='ENSEMBLID')
+```
+
+```{r}
+uccd <- UC_CD %>% group_by(Ensembl_ID) %>% count(Ensembl_ID)
+colnames(uccd)[2] <- 'UC_CD_geneCount'
+
+UC_CDb <- merge(uccd,UC_CD,by.x='Ensembl_ID',by.y='Ensembl_ID')
+
+```
+
+
+```{r}
+ld <- LymeDisease %>% group_by(Gene) %>% count(Gene)
+colnames(ld)[2] <- 'Lyme_geneCount'
+
+LymeDisease2 <- merge(ld,LymeDisease,by.x='Gene',by.y='Gene')
+
+LymeDisease3 <- LymeDisease2[complete.cases(LymeDisease2$Gene),]
+
+LymeDisease4 <- LymeDisease3[,-c(1:2)]
+LymeDisease4 <- 2^(LymeDisease4) #inverse log2 on data
+LymeDisease5 <- cbind(LymeDisease3[,1:2],LymeDisease4)
+
+#the GSM ID header isn't useful, we'll read in the header data for this study
+metaLyme <- read.csv('descriptors2.csv')
+metaLyme$Sample_Title <- as.character(paste(metaLyme$Sample_Title))
+
+metaLyme$Sample_Title <- gsub('PBMC total RNA-Healthy control ',
+                              'healthy_Lyme_',metaLyme$Sample_Title)
+metaLyme$Sample_Title <- gsub('PBMC total RNA-Acute Lyme disease subject ',
+                              'acuteLyme_',metaLyme$Sample_Title)
+metaLyme$Sample_Title <- gsub('PBMC total RNA-early convalescent Lyme disease subject ','Lyme_anti1month_',metaLyme$Sample_Title)
+metaLyme$Sample_Title <- gsub('PBMC total RNA-late convalescent Lyme disease subject ','Lyme_anti6months_',metaLyme$Sample_Title)
+
+colnames(LymeDisease5)[3:88]<-metaLyme$Sample_Title
+
+
+```
+
+
+```{r}
+colnames(covid19b)[2] <- 'geneCount'
+colnames(LymeDisease5)[1:2] <- c('gene','geneCount')
+colnames(RA)[2] <- 'geneCount'
+colnames(UC_CDb)[2] <- 'geneCount'
+colnames(UL_study1)[2] <- 'geneCount'
+colnames(UL_study2)[8] <- 'geneCount'
+```
+
+```{r}
+RA$group <- 'group'
+healthy <- grep('healthy',RA$sample)
+treatment <- grep('treatment',RA$sample)
+RA[healthy,8] <- 'healthy RA'
+RA[treatment,8] <- 'treatment RA abatacept'
+
+RA2 <- gather(RA,key='groupMean',value='groupMeanValue',3:4)
+RA3 <- gather(RA2,key='foldChangeGroup',value='foldChangeGroupValue',3)
+
+```
+
+
+```{r}
+covid19b2 <- gather(covid19b,key='sample',value='sampleValue',3:36)
+covid19b2$group <- 'group'
+conv <- grep('convalescent',covid19b2$sample)
+healthy <- grep('healthy',covid19b2$sample)
+mod <- grep('moderate',covid19b2$sample)
+severe <- grep('severe',covid19b2$sample)
+icu <- grep('ICU',covid19b2$sample)
+
+covid19b2[conv,12] <- 'convalescent cv19'
+covid19b2[healthy,12] <- 'healthy cv19' 
+covid19b2[mod,12] <- 'moderate cv19' 
+covid19b2[severe,12] <- 'severe cv19' 
+covid19b2[icu,12] <- 'ICU cv19' 
+
+cv1 <- covid19b2
+
+cv2 <- gather(cv1,key='groupMean',value='groupMeanValue',3:6)
+cv3 <- gather(cv2, key='foldChangeGroup',value='foldChangeGroupValue',3:5)
+
+```
+
+```{r}
+UL_study1b <- gather(UL_study1,key='groupMean',value='groupMeanValue',3:4)
+UL_study1c <- gather(UL_study1b,key='foldChangeGroup',
+                     value='foldChangeGroupValue',3)
+
+```
+
+```{r}
+UL_Study2 <- UL_study2[,-c(2:7)]
+UL_study2b <- gather(UL_Study2,key='groupMean',value='groupMeanValue',3:4)
+UL_study2c <- gather(UL_study2b,key='foldChangeGroup',
+                     value='foldChangeGroupValue',3)
+
+
+```
+
+The Lyme Disease and Ulcerative Colitis with Crohn's Disease data needs to be grouped by their genes, get the group means, and the fold change values between the diseased or treated group means to the healthy group mean value per gene. Then gathered into the sample, mean, and fold change groups with corresponding values.
+
+```{r}
+LD <- LymeDisease5 %>% group_by(gene) %>% summarise_at(vars('healthy_Lyme_1':'Lyme_anti6months_10'),mean)
+
+LD$healthyLymeMean <- apply(LD[,3:23],1,mean)
+LD$acuteLymeMean <- apply(LD[24:51],1,mean)
+LD$Lyme1monthMean <- apply(LD[52:78],1,mean)
+LD$Lyme6monthsMean <- apply(LD[79:88],1,mean)
+
+#use same fold change values as in RA samples
+LD$acuteHealthyLymeFoldChange <- ifelse(LD$acuteLymeMean/LD$healthyLymeMean=='Inf',
+  1+LD$acuteLymeMean, 
+ifelse(LD$acuteLymeMean/LD$healthyLymeMean=='NaN',1,
+ifelse(LD$acuteLymeMean/LD$healthyLymeMean<=0,
+  1-LD$healthyLymeMean,LD$acuteLymeMean/LD$healthyLymeMean)))
+
+LD$month1HealthyLymeFoldChange <- ifelse(LD$Lyme1monthMean/LD$healthyLymeMean=='Inf',
+  1+LD$Lyme1monthMean,
+ifelse(LD$Lyme1monthMean/LD$healthyLymeMean=='NaN',1,
+ifelse(LD$Lyme1monthMean/LD$healthyLymeMean<=0,
+  1-LD$healthyLymeMean,LD$Lyme1monthMean/LD$healthyLymeMean)))
+
+LD$month6HealthyLymeFoldChange <- ifelse(LD$Lyme6monthsMean/LD$healthyLymeMean=='Inf',
+  1+LD$Lyme6monthsMean,
+ifelse(LD$Lyme6monthsMean/LD$healthyLymeMean=='NaN',1,
+ifelse(LD$Lyme6monthsMean/LD$healthyLymeMean<=0,
+  1-LD$healthyLymeMean,LD$Lyme6monthsMean/LD$healthyLymeMean)))
+
+LD0 <- LymeDisease5[,1:2]
+
+LD01 <- merge(LD0,LD,by.x='gene',by.y='gene')
+LD1 <- gather(LD01,key='sample',value='sampleValue',3:88)
+LD1$group <- 'group'
+healthy <- grep('healthy',LD1$sample)
+acute <- grep('acute',LD1$sample)
+month1 <- grep('anti1',LD1$sample)
+month6 <- grep('anti6',LD1$sample)
+LD1[healthy,12] <- 'healthy Lyme'
+LD1[acute,12] <- 'acute Lyme'
+LD1[month1,12] <- 'Lyme 1 month antibiotics'
+LD1[month6,12] <- 'Lyme 6 months antibiotics'
+
+LD2 <- gather(LD1, key='groupMean',value='groupMeanValue',3:6)
+LD3 <- gather(LD2,key='foldChangeGroup',value='foldChangeGroupValue',3:5)
+
+
+```
+
+
+
+```{r}
+uccb <- UC_CDb %>% group_by(Ensembl_ID) %>% summarise_at(vars('Crohns.Disease.rep.1':'Ulcerative.Colitis.rep.5'),mean)
+
+uccb2 <- UC_CDb[,1:2]
+uccb2a <- merge(uccb2,uccb,by.x='Ensembl_ID', by.y='Ensembl_ID')
+
+uccb2a$CrohnsMean <- apply(uccb2a[,3:7],1,mean)
+uccb2a$healthyCrohnsMean <- apply(uccb2a[,8:12],1,mean)
+uccb2a$mockCrohnsMean <- apply(uccb2a[,13:15],1,mean)
+uccb2a$ulcerativeColitisMean <- apply(uccb2a[,16:20],1,mean)
+
+#use modified FCs used in RA data
+uccb2a$crohnsHealthyFoldChange <- ifelse(uccb2a$CrohnsMean/uccb2a$healthyCrohnsMean=='Inf',
+  1+uccb2a$CrohnsMean,
+ifelse(uccb2a$CrohnsMean/uccb2a$healthyCrohnsMean=='NaN',
+  1,
+ifelse(uccb2a$CrohnsMean/uccb2a$healthyCrohnsMean <= 0,
+  1+uccb2a$healthyCrohnsMean,
+  uccb2a$CrohnsMean/uccb2a$healthyCrohnsMean)))
+
+uccb2a$mockHealthyFoldChange <- ifelse(uccb2a$mockCrohnsMean/uccb2a$healthyCrohnsMean=='Inf',
+  1+uccb2a$mockCrohnsMean,
+ifelse(uccb2a$mockCrohnsMean/uccb2a$healthyCrohnsMean=='NaN',
+  1,
+ifelse(uccb2a$mockCrohnsMean/uccb2a$healthyCrohnsMean<=0,
+  1-uccb2a$healthyCrohnsMean,
+  uccb2a$mockCrohnsMean/uccb2a$healthyCrohnsMean)))
+
+uccb2a$ulcerColitFoldChange <- ifelse(uccb2a$ulcerativeColitisMean/uccb2a$healthyCrohnsMean=='Inf',
+  1+uccb2a$ulcerativeColitisMean,
+ifelse(uccb2a$ulcerativeColitisMean/uccb2a$healthyCrohnsMean=='NaN',
+  1,
+ifelse(uccb2a$ulcerativeColitisMean/uccb2a$healthyCrohnsMean<=0,
+  1-uccb2a$healthyCrohnsMean,
+  uccb2a$ulcerativeColitisMean/uccb2a$healthyCrohnsMean)))
+
+uccb2b <- gather(uccb2a,key='sample',value='sampleValue',3:20)
+
+uccb2b$group <- 'group'
+
+healthy <- grep('Healthy',uccb2b$sample)
+crohns <- grep('Crohns',uccb2b$sample)
+mock <- grep('mock',uccb2b$sample)
+ulcer <- grep('Ulcer',uccb2b$sample)
+
+uccb2b[healthy,12] <- 'healthy non-IBS'
+uccb2b[crohns,12] <- 'Crohns Disease IBS'
+uccb2b[mock,12] <- 'mock IBS samples'
+uccb2b[ulcer,12] <- 'ulcerative colitis IBS'
+
+uccb2c <- gather(uccb2b,key='groupMean',value='groupMeanValue',3:6)
+uccb2d <- gather(uccb2c,key='foldChangeGroup',value='foldChangeGroupValue',3:5)
+
+```
+
+
+```{r}
+covid19 <- cv3
+LymeDisease <- LD3
+RheumatoidArthritis <- RA3
+IBS <- uccb2d
+UL_study1 <- UL_study1c
+UL_study2 <- UL_study2c 
+
+```
+
+
+
+
+```{r}
+colnames(covid19)
+colnames(IBS)
+colnames(LymeDisease)
+colnames(RheumatoidArthritis)
+colnames(UL_study1)
+colnames(UL_study2)
+```
+
+
+```{r}
+systemGenes <- read.csv('bodySystems3.csv')
+```
+
+
+```{r}
+cv19 <- merge(systemGenes,covid19,by.x='EnsemblID',by.y='ENSEMBLID')
+uccd <- merge(systemGenes,IBS,by.x='EnsemblID',by.y='Ensembl_ID')
+LD <- merge(systemGenes,LymeDisease,by.x='gene',by.y='gene')
+RA <- merge(systemGenes,RheumatoidArthritis,by.x='gene',by.y='gene')
+UL1 <- merge(systemGenes,UL_study1,by.x='gene',by.y='gene')
+UL2 <- merge(systemGenes,UL_study2,by.x='gene',by.y='gene')
+
+```
+
+```{r}
+colnames(cv19)
+```
+
+```{r}
+colnames(uccd)
+```
+
+```{r}
+colnames(RA)
+```
+
+```{r}
+uccd1 <- uccd[,c(2:6,1,7:15)]
+cv19b <- cv19[,c(2:6,1,7:15)]
+```
+
+
+```{r}
+colnames(uccd1)
+colnames(cv19b)
+colnames(RA)
+colnames(LD)
+colnames(UL1)
+colnames(UL2)
+```
+
+
+```{r}
+sixStudiesAndSystemGenes <- rbind(uccd1,cv19b,RA,LD,UL1,UL2)
+
+```
+
+
+```{r}
+unique(sixStudiesAndSystemGenes$group)
+
+```
+
+```{r}
+covid19g <- grep('cv19',sixStudiesAndSystemGenes$group)
+fibroid1g <- grep('GSE120854',sixStudiesAndSystemGenes$group)
+RAg <- grep(' RA',sixStudiesAndSystemGenes$group)
+fibroid2g <- grep('myo',sixStudiesAndSystemGenes$group)
+lymeg <- grep('Lyme',sixStudiesAndSystemGenes$group)
+ibsg <- grep('IBS',sixStudiesAndSystemGenes$group)
+
+sixStudiesAndSystemGenes$researchStudy <- 'researchStudy'
+
+sixStudiesAndSystemGenes[covid19g,16] <- 'covid 19 GSE152418'
+sixStudiesAndSystemGenes[fibroid1g,16] <- 'fibroid GSE120854'
+sixStudiesAndSystemGenes[fibroid2g,16] <- 'fibroid GSE128242'
+sixStudiesAndSystemGenes[ibsg,16] <- 'IBS GSE135223'
+sixStudiesAndSystemGenes[lymeg,16] <- 'Lyme disease GSE145974'
+sixStudiesAndSystemGenes[RAg,16] <- 'Rheumatoid Arthritis GSE151161'
+
+unique(sixStudiesAndSystemGenes$researchStudy)
+
+
+```
+
+```{r,eval=F}
+write.csv(sixStudiesAndSystemGenes,'sixStudiesGatheredFCsGrouped.csv',row.names=F)
+```
+
+I created a dashboard in Tableau that is available to explore on 
+<a href='https://public.tableau.com/profile/janis5126#!/vizhome/SixResearchStudiesCompared/SixResearchStudiesCompared?publish=yes' target='blank'>public.tableau.com</a>.
+
+
+![image of dashboard of all 6 studies](./images/dashboard6Studies.png)
+
+In this study there are three filters at the top left of the dashboard that will filter by research study, then body system or genecards.org topic for top genes, and also by gene. You don't have to select an item from each filter, but the three charts in the dashboard as well as the Gene Cards gene summary will zoom in on that filtered data if you do. To go back to all or to deselect, just select each selected item again to remove the highlight. There are two color legends. The middle left legend is for the fold change groups within each study that displays at the bottom left. The middle right legend displays the individual sample and group gene expression values on a log scale within Tableau's chart options. Unfortunately some nulls appeared in Tableau when uploading the data approximately 2 GB in size. Sometimes it can be finicky on character strings as well, but all three gene summaries did not cause a problem in Tableau today. 
+
+
