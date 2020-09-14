@@ -593,7 +593,8 @@ colnames(UL_study2)
 
 
 ```{r}
-systemGenes <- read.csv('bodySystems3.csv')
+systemGenes <- read.csv('bodySystems4.csv')#more genes added 9/13/2020
+#systemGenes <- read.csv('bodySystems3.csv')
 ```
 
 
@@ -620,8 +621,8 @@ colnames(RA)
 ```
 
 ```{r}
-uccd1 <- uccd[,c(2:6,1,7:15)]
-cv19b <- cv19[,c(2:6,1,7:15)]
+uccd1 <- uccd[,c(2:6,1,7:14)]
+cv19b <- cv19[,c(2:6,1,7:14)]
 ```
 
 
@@ -656,12 +657,12 @@ ibsg <- grep('IBS',sixStudiesAndSystemGenes$group)
 
 sixStudiesAndSystemGenes$researchStudy <- 'researchStudy'
 
-sixStudiesAndSystemGenes[covid19g,16] <- 'covid 19 GSE152418'
-sixStudiesAndSystemGenes[fibroid1g,16] <- 'fibroid GSE120854'
-sixStudiesAndSystemGenes[fibroid2g,16] <- 'fibroid GSE128242'
-sixStudiesAndSystemGenes[ibsg,16] <- 'IBS GSE135223'
-sixStudiesAndSystemGenes[lymeg,16] <- 'Lyme disease GSE145974'
-sixStudiesAndSystemGenes[RAg,16] <- 'Rheumatoid Arthritis GSE151161'
+sixStudiesAndSystemGenes[covid19g,15] <- 'covid 19 GSE152418'
+sixStudiesAndSystemGenes[fibroid1g,15] <- 'fibroid GSE120854'
+sixStudiesAndSystemGenes[fibroid2g,15] <- 'fibroid GSE128242'
+sixStudiesAndSystemGenes[ibsg,15] <- 'IBS GSE135223'
+sixStudiesAndSystemGenes[lymeg,15] <- 'Lyme disease GSE145974'
+sixStudiesAndSystemGenes[RAg,15] <- 'Rheumatoid Arthritis GSE151161'
 
 unique(sixStudiesAndSystemGenes$researchStudy)
 

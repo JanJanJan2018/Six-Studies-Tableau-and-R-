@@ -1,0 +1,2480 @@
+More genes from body systems to add to dashboard on various diseases
+
+There are many substances people encounter in their life at various points that we find out can affect long term health like drugs, or over the counter drugs, treating diseases like yeast infections or vaginal dryness or allergies, or using lubricants or condoms. It can't be avoided and no apologies as these topics are out of bounds for most formal conversations, but many people (Concetta R., AQPO Neff, and Danny L., Tina L., Sarah P., Chayla B., Diane R., and others) have used all of the above or know someone who has, or want to see how the body reacts under a list of various illicit drugs according to the top ranked genes. So this added set of genes is for those body systems. It would go against science to exclude some of these informal ingredients but I also wanted to include herbal teas known off the top of my mind, some natural remedy plants, and vegetables and fruits to compare. Think of this as the 'cards against humanity' type of filters to see how the top genes of these systems and networks in the body reactions affect the disease and healthy state of the various tissue samples.
+
+```{r}
+source('geneCards2.R')
+```
+
+Get all the genes first.
+```{r}
+
+# ingredients in Degree deodorant 'shower clean' invisible solid
+#Aluminium zirconium tetrachlorohydrex gly ---not in genecards.org
+#cyclopentasiloxane  ---not in genecards.org
+find25genes('isopropyl palmitate')
+find25genes('stearyl alcohol')
+find25genes('mineral oil')
+find25genes('talc')
+find25genes('hydrogenated castor oil')
+find25genes('parfum')
+find25genes('BHT')
+#steareth-100   ---not in genecards.org
+
+
+find25genes('antipsychotics')
+find25genes('anxiety') 
+find25genes('depression')
+find25genes('turnip greens')
+find25genes('mango')
+find25genes('garlic')
+find25genes('peppers')
+find25genes('yeast infection')
+find25genes('shingles')
+find25genes('herpes simples 1')
+find25genes('herpes simplex 2')
+find25genes('ghb') #illicit drug
+find25genes('kale')
+find25genes('miconazole nitrate') #yeast infection active ingredient
+find25genes('ginger')
+find25genes('green onions')
+find25genes('onion')
+find25genes('red onions')
+find25genes('benadryl')
+find25genes('tylenol pm')
+find25genes('flavanoids')
+find25genes('spermicide') #birth contraceptive
+find25genes('rohypnol') #date rape drug
+find25genes('echinacea') #herbal remedy
+find25genes('st johns wart') #herbal remedy
+find25genes('silicone')
+find25genes('mushrooms')
+find25genes('epstein barr virus')
+find25genes('jackfruit')
+find25genes('cashews')
+find25genes('perfume')
+find25genes('latex')
+find25genes('green tea')
+find25genes('peppercorn') #black pepper
+find25genes('ketamine') #illicit drug
+find25genes('visine')
+find25genes('turmeric')
+find25genes('goldenseal') #home remedy herbal
+find25genes('claritin') #otc allergy pill
+find25genes('matches') #people lost fingers in match factories from sulfur
+find25genes('salmon')
+find25genes('codeine') #regulated pain killer
+find25genes('nicotine') #cigarrette addictive ingredient
+find25genes('vicodine') #regulated pain killer
+find25genes('heroin') #illicit drug
+find25genes('cocaine') #illicit drug
+find25genes('tuberculosis') #related to epstein barr virus
+find25genes('mononucleosis') #related to epstein barr virus
+find25genes('malaria') #next gen gets sickle cell in some cases
+find25genes('mineral oil') #ingredient in menopause vaginal inserts
+find25genes('psychedelic') #illicit drug
+find25genes('mdma') #illicit drug ecstacy or molly
+find25genes('opiates') #illicit drug or regulated pain killer
+find25genes('methamphetamines') #illicit drug
+find25genes('sudafed') #ID for its use in making methamphetamines an illicit drug
+find25genes('weed eater') #roundup lawsuit linked to lymphoma
+find25genes('weed killer') #roundup lawsuit linked to lymphoma
+find25genes('lentils')
+find25genes('allegra') #otc allergy pill
+find25genes('chocolate')
+find25genes('starfruit ')
+find25genes('curry')
+find25genes('bean sprouts')
+find25genes('broccoli sprouts')
+find25genes('bay leaves')
+find25genes('basil')
+find25genes('blackberries')
+find25genes('blueberries')
+find25genes('arugula')
+find25genes('tannins') #linked to coffees and stored or processed meats and cheeses
+find25genes('fennel') #super food vegetable
+find25genes('beets') #eastern european and southern vegetable
+find25genes('soy')
+find25genes('yams')
+find25genes('sweet potato')
+find25genes('cabbage')
+find25genes('carrots')
+find25genes('vaginal dryness')
+find25genes('boc choi')
+find25genes('sex lubricant')
+find25genes('birth contraceptive')
+
+find25genes('xanax') 
+#anxiety prescribed medicine that people have suicidal withdrawals from
+
+find25genes('celery')
+find25genes('acetylcholine')
+find25genes('broccoli')
+find25genes('epinephrine') #fight or flight chemical by adrenals
+find25genes('norepinephrine') #fight or flight chemical by adrenals
+find25genes('chamomile') #herbal tea
+find25genes('antihistamine')
+find25genes('jasmine') #herbal tea
+find25genes('yerba mate') #alternate to caffeine or used with caffeine
+find25genes('gingko biloba') #similar to yerba mate
+find25genes('ginseng')
+find25genes('syphilis')
+find25genes('gonorrhea')
+find25genes('chlamydia')
+
+find25genes('baby powder')
+#linked to ovarian cancer as a chemical can be absorbed and cause tumors
+
+find25genes('candles')
+find25genes('incontinence') #trouble holding bladder or bowels from trauma or age
+
+#replens ingredients from a vaginal dryness product
+find25genes('polycarbophil')
+find25genes('mineral oil')
+find25genes('hydrogenated palm oil glyceride')
+
+#alternate name for carbomer homopolymer type B
+find25genes('allyl pentaerythritol crosslinked')
+
+find25genes('glycerine')
+
+find25genes('grapefruit')
+find25genes('strawberries')
+find25genes('maple syrup')
+find25genes('corn')
+find25genes('lime')
+find25genes('lemon')
+find25genes('cranberries')
+find25genes('cherries')
+find25genes('plums')
+find25genes('figs')
+find25genes('dates')
+find25genes('squash')
+find25genes('zucchini')
+find25genes('egg plant')
+find25genes('Orange')
+find25genes('bananas')
+find25genes('almonds')
+find25genes('oregano')
+find25genes('red fennel')
+find25genes('peas')
+find25genes('beans')
+find25genes('pineapple')
+find25genes('cantelope')
+find25genes('watermelon')
+find25genes('peanuts')
+find25genes('hazelnuts')
+find25genes('pine nuts')
+find25genes('pumpkin')
+find25genes('walnuts')
+find25genes('chestnuts')
+find25genes('coconut')
+find25genes('sunflower seeds')
+find25genes('pistachio')
+find25genes('macadamia nuts')
+find25genes('corn nuts')
+find25genes('pecans')
+find25genes('brazil nuts')
+find25genes('okra')
+find25genes('green beans')
+find25genes('black eyed Peas')
+find25genes('sesame seeds')
+find25genes('caraway')
+find25genes('papaya')
+find25genes('papaya seeds')
+find25genes('anise') #herb tastes/smells like black licorice
+find25genes('gelatin')
+
+
+#ingredients in tampons
+find25genes('cotton')
+find25genes('rayon')
+find25genes('polyester')
+find25genes('polypropylene')
+find25genes('polyethylene')
+
+#online listed ingredients of astroglide
+find25genes('glycerine')
+find25genes('hydroxyethyl cellulose')
+find25genes('chlorhexidine gluconate')
+find25genes('methylparaben')
+find25genes('gluconolactene')
+find25genes('sodium hydroxide')
+
+#online listed ingredients of astroglide
+find25genes('propylene-glycol')
+find25genes('peg-8')
+find25genes('hydroxypropylcellulose')
+
+
+#online listed banned ingredient in jack3d pre-workout
+find25genes('DMAA')
+
+#online listed jack3d pre-workout not banned
+find25genes('beta alanine')
+find25genes('monohydrate')
+find25genes('nitric oxide')
+find25genes('adaptogen blend')
+find25genes('yohimbe')
+find25genes('schisandra chinensis')
+
+#protein powder ingredients body fortress
+find25genes('betaine anhydrous')
+find25genes('milk protein isolate')
+find25genes('whey protein isolate')
+find25genes('soy lecithin')
+find25genes('carrageenan')
+find25genes('dextrin')
+find25genes('acesulfame potassium')
+find25genes('sucralose')
+
+#preworkout ingredients in SixStar brand We already have in our dataset from
+#ulcerative colitis and crohn's disease study
+# find25genes('choline bitartrate')
+# find25genes('L-arginine alpha-ketoglutarate')
+# find25genes('L-citruline')
+# find25genes('L-arginine hydrochloride')
+# find25genes('caffeine anhydrous')
+# find25genes('L-tyrosine')
+# find25genes('L-carnitine L-tartrate')
+# find25genes('green coffee extract')
+# find25genes('silicon dioxide')
+# find25genes('malic acid')
+# find25genes('sucralose')
+# find25genes('FD&C Red No. 40')
+# find25genes('acesulfame-potassium')
+
+
+#personal lubricants
+#listed online ingredients in astroglide
+find25genes('glycerine')
+find25genes('hydroxyethyl cellulose')
+find25genes('chlorhexidine gluconate')
+find25genes('methylparaben')
+find25genes('gluconolactone')
+find25genes('sodium hydroxide')
+
+#listed online ingredients in K-y warming lubricant
+find25genes('propylene-glycol')
+find25genes('peg-8')
+find25genes('hydroxypropylcellulose')
+
+find25genes('gun powder')
+find25genes('tear gas')
+find25genes('crying')
+find25genes('pepper spray')
+find25genes('neuroma')
+find25genes('fibromyalgia')
+find25genes('eucalyptus')
+find25genes('bug spray')
+find25genes('rosemary')
+#lavendar, lavender, lavandula not listed on genecards.org
+
+#off! bug repellant ingredients
+find25genes('deet')
+find25genes('butane')
+find25genes('propane')
+find25genes('isobutane')
+find25genes('ethanol')
+find25genes('corn starch')
+find25genes('magnesium carbonate')
+find25genes('isopropyl myristate')
+find25genes('aminomethyl propanol')
+#dimethicone not listed on genecards.org
+find25genes('sodium benzoate')
+
+find25genes('anesthesia')
+find25genes('intra uterine device')
+
+find25genes('polyurethane') #alternative to latex birth control
+find25genes('demerol') #opioid pain medicine
+
+
+```
+
+
+
+```{r}
+
+getProteinGenes('isopropyl palmitate')
+getProteinGenes('stearyl alcohol')
+getProteinGenes('mineral oil')
+getProteinGenes('talc')
+getProteinGenes('hydrogenated castor oil')
+getProteinGenes('parfum')
+getProteinGenes('BHT')
+getProteinGenes('antipsychotics')
+getProteinGenes('anxiety') 
+getProteinGenes('depression')
+getProteinGenes('turnip greens')
+getProteinGenes('mango')
+getProteinGenes('garlic')
+getProteinGenes('peppers')
+getProteinGenes('yeast infection')
+```
+
+```{r}
+isopropylPalmitate <- read.csv("Top25isopropyl-palmitates.csv")
+stearylAlcohol <- read.csv("Top25stearyl-alcohols.csv")
+mineralOil <- read.csv("Top25mineral-oils.csv")
+talc <- read.csv("Top25talcs.csv")
+hydrogenatedCastorOil <- read.csv("Top25hydrogenated-castor-oils.csv")
+parfum <- read.csv("Top25parfums.csv")
+bht <- read.csv("Top25bhts.csv")
+antipsychotics <- read.csv("Top25antipsychoticss.csv")
+anxiety <- read.csv("Top25anxietys.csv")
+depression <- read.csv("Top25depressions.csv")
+turnipGreens <- read.csv("Top25turnip-greenss.csv")
+mango <- read.csv("Top25mangos.csv")
+garlic <- read.csv("Top25garlics.csv")
+peppers <- read.csv("Top25pepperss.csv")
+yeastInfection <- read.csv("Top25yeast-infections.csv")
+
+```
+
+
+```{r}
+getProteinGenes('shingles')
+getProteinGenes('herpes simples 1')
+getProteinGenes('herpes simplex 2')
+getProteinGenes('ghb') 
+getProteinGenes('kale')
+getProteinGenes('miconazole nitrate') 
+getProteinGenes('ginger')
+getProteinGenes('green onions')
+getProteinGenes('onion')
+getProteinGenes('red onions')
+getProteinGenes('benadryl')
+getProteinGenes('tylenol pm')
+getProteinGenes('flavanoids')
+getProteinGenes('spermicide') 
+getProteinGenes('rohypnol') 
+```
+
+
+```{r}
+shingles <- read.csv("Top25shingless.csv")
+herpes1 <- read.csv("Top25herpes-simples-1s.csv")
+herpes2 <- read.csv("Top25herpes-simplex-2s.csv")
+ghb <- read.csv("Top25ghbs.csv")
+kale <- read.csv("Top25kales.csv")
+miconazoleNitrate <- read.csv("Top25miconazole-nitrates.csv")
+ginger <- read.csv("Top25gingers.csv")
+greenOnions <- read.csv("Top25green-onionss.csv")
+onions <- read.csv("Top25onions.csv")
+redOnions <- read.csv("Top25red-onionss.csv")
+benadryl <- read.csv("Top25benadryls.csv")
+tylenolPM <- read.csv("Top25tylenol-pms.csv")
+flavanoids <- read.csv("Top25flavanoidss.csv")
+spermicide <- read.csv("Top25spermicides.csv")
+rohypnol <- read.csv("Top25rohypnols.csv")
+
+```
+
+
+
+```{r}
+getProteinGenes('echinacea') 
+getProteinGenes('st johns wart') 
+getProteinGenes('silicone')
+getProteinGenes('mushrooms')
+getProteinGenes('epstein barr virus')
+getProteinGenes('jackfruit')
+getProteinGenes('cashews')
+getProteinGenes('perfume')
+getProteinGenes('latex')
+getProteinGenes('green tea')
+getProteinGenes('peppercorn') 
+getProteinGenes('ketamine') 
+getProteinGenes('visine')
+getProteinGenes('turmeric')
+getProteinGenes('goldenseal')
+```
+
+
+```{r}
+echinacea <- read.csv("Top25echinaceas.csv")
+stJohnsWart <- read.csv("Top25st-johns-warts.csv")
+silicone <- read.csv("Top25silicones.csv")
+mushrooms <- read.csv("Top25mushroomss.csv")
+epsteinBarr <- read.csv("Top25epstein-barr-viruss.csv")
+jackfruit <- read.csv("Top25jackfruits.csv")
+cashews <- read.csv("Top25cashewss.csv")
+perfume <- read.csv("Top25perfumes.csv")
+latex <- read.csv("Top25latexs.csv")
+greenTea <- read.csv("Top25green-teas.csv")
+peppercorn <- read.csv("Top25peppercorns.csv")
+ketamine <- read.csv("Top25ketamines.csv")
+visine <- read.csv("Top25visines.csv")
+turmeric <- read.csv("Top25turmerics.csv")
+goldenseal <- read.csv("Top25goldenseals.csv")
+```
+
+
+
+```{r}
+getProteinGenes('claritin') 
+getProteinGenes('matches') 
+getProteinGenes('salmon')
+getProteinGenes('codeine') 
+getProteinGenes('nicotine')
+getProteinGenes('vicodine') 
+getProteinGenes('heroin') 
+getProteinGenes('cocaine') 
+getProteinGenes('tuberculosis') 
+getProteinGenes('mononucleosis') 
+getProteinGenes('malaria') 
+getProteinGenes('psychedelic') 
+getProteinGenes('mdma') 
+getProteinGenes('opiates')
+```
+
+
+```{r}
+claritin <- read.csv("Top25claritins.csv")
+matches <- read.csv("Top25matchess.csv")
+salmon <- read.csv("Top25salmons.csv")
+codeine <- read.csv("Top25codeines.csv")
+nicotine <- read.csv("Top25nicotines.csv")
+vicodine <- read.csv("Top25vicodines.csv")
+heroin <- read.csv("Top25heroins.csv")
+cocaine <- read.csv("Top25cocaines.csv")
+tuberculosis <- read.csv("Top25tuberculosiss.csv")
+mononucleosis <- read.csv("Top25mononucleosiss.csv")
+malaria <- read.csv("Top25malarias.csv")
+psychedelic <- read.csv("Top25psychedelics.csv")
+mdma <- read.csv("Top25mdmas.csv")
+opiates <- read.csv("Top25opiatess.csv")
+```
+
+
+
+```{r}
+getProteinGenes('methamphetamines') 
+getProteinGenes('sudafed') 
+getProteinGenes('weed eater') 
+getProteinGenes('weed killer') 
+getProteinGenes('lentils')
+getProteinGenes('allegra') 
+getProteinGenes('egg plant')
+getProteinGenes('chocolate')
+getProteinGenes('starfruit ')
+getProteinGenes('curry')
+getProteinGenes('bean sprouts')
+getProteinGenes('broccoli sprouts')
+getProteinGenes('bay leaves')
+getProteinGenes('basil')
+getProteinGenes('blackberries')
+```
+
+
+```{r}
+meth <- read.csv("Top25methamphetaminess.csv")
+sudafed <- read.csv("Top25sudafeds.csv")
+weedEater <- read.csv("Top25weed-eaters.csv")
+weedKiller <- read.csv("Top25weed-killers.csv")
+lentils <- read.csv("Top25lentilss.csv")
+allegra <- read.csv("Top25allegras.csv")
+eggPlant <- read.csv("Top25egg-plants.csv")
+chocolate <- read.csv("Top25chocolates.csv")
+starFruit <- read.csv("Top25starfruit-s.csv")
+curry <- read.csv("Top25currys.csv")
+beanSprouts <- read.csv("Top25bean-sproutss.csv")
+broccoliSprouts <- read.csv("Top25broccoli-sproutss.csv")
+bayLeaves <- read.csv("Top25bay-leavess.csv")
+basil <- read.csv("Top25basils.csv")
+blackberries <- read.csv("Top25blackberriess.csv")
+
+```
+
+
+
+```{r}
+getProteinGenes('blueberries')
+getProteinGenes('arugula')
+getProteinGenes('tannins') 
+getProteinGenes('fennel') 
+getProteinGenes('beets') 
+getProteinGenes('soy')
+getProteinGenes('yams')
+getProteinGenes('sweet potato')
+getProteinGenes('cabbage')
+getProteinGenes('carrots')
+getProteinGenes('vaginal dryness')
+getProteinGenes('boc choi')
+getProteinGenes('sex lubricant')
+getProteinGenes('birth contraceptive')
+getProteinGenes('xanax') 
+```
+
+
+```{r}
+blueberries <- read.csv("Top25blueberriess.csv") 
+arugula <- read.csv("Top25arugulas.csv") 
+tannins <- read.csv("Top25tanninss.csv") 
+fennel <- read.csv("Top25fennels.csv") 
+beets <- read.csv("Top25beetss.csv") 
+soy <- read.csv("Top25soys.csv") 
+yams <- read.csv("Top25yamss.csv") 
+sweetPotato <- read.csv("Top25sweet-potatos.csv") 
+cabbage <- read.csv("Top25cabbages.csv") 
+carrots <- read.csv("Top25carrotss.csv") 
+vaginalDryness <- read.csv("Top25vaginal-drynesss.csv") 
+bocChoi <- read.csv("Top25boc-chois.csv") 
+sexLubricant <- read.csv("Top25sex-lubricants.csv") 
+birthContraceptive <- read.csv("Top25birth-contraceptives.csv") 
+xanax <- read.csv("Top25xanaxs.csv") 
+
+```
+
+
+
+```{r}
+getProteinGenes('celery')
+getProteinGenes('acetylcholine')
+getProteinGenes('broccoli')
+getProteinGenes('epinephrine') 
+getProteinGenes('norepinephrine') 
+getProteinGenes('chamomile') 
+getProteinGenes('antihistamine')
+getProteinGenes('jasmine') 
+getProteinGenes('yerba mate') 
+getProteinGenes('gingko biloba') 
+getProteinGenes('ginseng')
+getProteinGenes('syphilis')
+getProteinGenes('gonorrhea')
+getProteinGenes('chlamydia')
+getProteinGenes('baby powder')
+```
+
+
+```{r}
+celery <- read.csv("Top25celerys.csv") 
+acetylcholine <- read.csv("Top25acetylcholines.csv") 
+broccoli <- read.csv("Top25broccolis.csv") 
+epinephrine <- read.csv("Top25epinephrines.csv") 
+norepinephrine <- read.csv("Top25norepinephrines.csv") 
+chamomile <- read.csv("Top25chamomiles.csv") 
+antihistamine <- read.csv("Top25antihistamines.csv") 
+jasmine <- read.csv("Top25jasmines.csv") 
+yerbaMate <- read.csv("Top25yerba-mates.csv") 
+gingkoBiloba <- read.csv("Top25gingko-bilobas.csv") 
+ginseng <- read.csv("Top25ginsengs.csv") 
+syphilis <- read.csv("Top25syphiliss.csv") 
+gonorrhea <- read.csv("Top25gonorrheas.csv") 
+chlamydia <- read.csv("Top25chlamydias.csv") 
+babyPowder <- read.csv("Top25baby-powders.csv") 
+
+```
+
+
+
+
+```{r}
+getProteinGenes('candles')
+getProteinGenes('incontinence') 
+getProteinGenes('polycarbophil')
+getProteinGenes('hydrogenated palm oil glyceride')
+getProteinGenes('allyl pentaerythritol crosslinked')
+getProteinGenes('glycerine')
+getProteinGenes('grapefruit')
+getProteinGenes('strawberries')
+getProteinGenes('maple syrup')
+getProteinGenes('corn')
+getProteinGenes('lime')
+getProteinGenes('lemon')
+getProteinGenes('cranberries')
+getProteinGenes('cherries')
+```
+
+
+```{r}
+candles <- read.csv("Top25candless.csv") 
+incontinence <- read.csv("Top25incontinences.csv") 
+polycarbophil <- read.csv("Top25polycarbophils.csv") 
+hydrogenatedPalmOilGlyceride <- read.csv("Top25hydrogenated-palm-oil-glycerides.csv")
+allylPentaerythritolCrosslinked <- read.csv("Top25allyl-pentaerythritol-crosslinkeds.csv") 
+glycerine <- read.csv("Top25glycerines.csv") 
+grapefruit <- read.csv("Top25grapefruits.csv") 
+strawberries <- read.csv("Top25strawberriess.csv") 
+mapleSyrup <- read.csv("Top25maple-syrups.csv") 
+corn <- read.csv("Top25corns.csv") 
+lime <- read.csv("Top25limes.csv") 
+lemon <- read.csv("Top25lemons.csv") 
+cranberries <- read.csv("Top25cranberriess.csv") 
+cherries <- read.csv("Top25cherriess.csv") 
+
+```
+
+
+
+```{r}
+getProteinGenes('plums')
+getProteinGenes('figs')
+getProteinGenes('dates')
+getProteinGenes('squash')
+getProteinGenes('zucchini')
+getProteinGenes('Orange')
+getProteinGenes('bananas')
+getProteinGenes('almonds')
+getProteinGenes('oregano')
+getProteinGenes('red fennel')
+getProteinGenes('peas')
+getProteinGenes('beans')
+getProteinGenes('pineapple')
+getProteinGenes('watermelon')
+getProteinGenes('peanuts')
+```
+
+
+
+```{r}
+plums <- read.csv("Top25plumss.csv") 
+figs <- read.csv("Top25figss.csv") 
+dates <- read.csv("Top25datess.csv") 
+squash <- read.csv("Top25squashs.csv") 
+zucchini <- read.csv("Top25zucchinis.csv") 
+orange <- read.csv("Top25oranges.csv") 
+bananas <- read.csv("Top25bananass.csv") 
+almonds <- read.csv("Top25almondss.csv") 
+oregano <- read.csv("Top25oreganos.csv") 
+redFennel <- read.csv("Top25red-fennels.csv") 
+peas <- read.csv("Top25peass.csv") 
+beans <- read.csv("Top25beanss.csv") 
+pineapple <- read.csv("Top25pineapples.csv") 
+watermelon <- read.csv("Top25watermelons.csv") 
+peanuts <- read.csv("Top25peanutss.csv") 
+
+
+```
+
+
+
+```{r}
+getProteinGenes('hazelnuts')
+getProteinGenes('pine nuts')
+getProteinGenes('pumpkin')
+getProteinGenes('walnuts')
+getProteinGenes('chestnuts')
+getProteinGenes('coconut')
+getProteinGenes('sunflower seeds')
+getProteinGenes('pistachio')
+getProteinGenes('macadamia nuts')
+getProteinGenes('corn nuts')
+getProteinGenes('pecans')
+getProteinGenes('brazil nuts')
+getProteinGenes('okra')
+getProteinGenes('green beans')
+getProteinGenes('black eyed Peas')
+```
+
+
+```{r}
+hazelnuts <- read.csv("Top25hazelnutss.csv") 
+pineNuts <- read.csv("Top25pine-nutss.csv") 
+pumpkin <- read.csv("Top25pumpkins.csv") 
+walnuts <- read.csv("Top25walnutss.csv") 
+chestnuts <- read.csv("Top25chestnutss.csv") 
+coconuts <- read.csv("Top25coconuts.csv") 
+sunflowerSeeds <- read.csv("Top25sunflower-seedss.csv") 
+pistachio <- read.csv("Top25pistachios.csv") 
+macadamiaNuts <- read.csv("Top25macadamia-nutss.csv") 
+cornNuts <- read.csv("Top25corn-nutss.csv") 
+pecans <- read.csv("Top25pecanss.csv") 
+brazilNuts <- read.csv("Top25brazil-nutss.csv") 
+okra <- read.csv("Top25okras.csv") 
+greenBeans <- read.csv("Top25green-beanss.csv") 
+blackEyedPeas <- read.csv("Top25black-eyed-peass.csv") 
+
+```
+
+
+
+
+```{r}
+getProteinGenes('sesame seeds')
+getProteinGenes('caraway')
+getProteinGenes('papaya')
+getProteinGenes('papaya seeds')
+getProteinGenes('anise') 
+getProteinGenes('gelatin')
+getProteinGenes('cotton')
+getProteinGenes('rayon')
+getProteinGenes('polyester')
+getProteinGenes('polypropylene')
+getProteinGenes('polyethylene')
+getProteinGenes('glycerine')
+getProteinGenes('hydroxyethyl cellulose')
+getProteinGenes('chlorhexidine gluconate')
+getProteinGenes('methylparaben')
+```
+
+
+```{r}
+sesameSeeds <- read.csv("Top25sesame-seedss.csv") 
+caraway <- read.csv("Top25caraways.csv") 
+papaya <- read.csv("Top25papayas.csv") 
+papayaSeeds <- read.csv("Top25papaya-seedss.csv") 
+anise <- read.csv("Top25anises.csv") 
+gelatin <- read.csv("Top25gelatins.csv") 
+cotton <- read.csv("Top25cottons.csv") 
+rayon <- read.csv("Top25rayons.csv") 
+polyester <- read.csv("Top25polyesters.csv") 
+polypropylene <- read.csv("Top25polypropylenes.csv") 
+polyethylene <- read.csv("Top25polyethylenes.csv") 
+glycerine <- read.csv("Top25glycerines.csv") 
+hydroxyethylCellulose <- read.csv("Top25hydroxyethyl-celluloses.csv") 
+chlorhexidineGluconate <- read.csv("Top25chlorhexidine-gluconates.csv") 
+methylparaben <- read.csv("Top25methylparabens.csv") 
+
+```
+
+
+
+```{r}
+getProteinGenes('gluconolactone')
+getProteinGenes('sodium hydroxide')
+getProteinGenes('propylene-glycol')
+getProteinGenes('peg-8')
+getProteinGenes('hydroxypropylcellulose')
+getProteinGenes('DMAA')
+getProteinGenes('beta alanine')
+getProteinGenes('monohydrate')
+getProteinGenes('nitric oxide')
+getProteinGenes('adaptogen blend')
+getProteinGenes('yohimbe')
+getProteinGenes('schisandra chinensis')
+getProteinGenes('betaine anhydrous')
+getProteinGenes('milk protein isolate')
+getProteinGenes('whey protein isolate')
+```
+
+
+```{r}
+gluconolactone <- read.csv("Top25gluconolactones.csv") 
+sodiumHydroxide <- read.csv("Top25sodium-hydroxides.csv") 
+propyleneGlycol <- read.csv("Top25propylene-glycols.csv") 
+peg8 <- read.csv("Top25peg-8s.csv") 
+hydroxypropylCellulose <- read.csv("Top25hydroxypropylcelluloses.csv") 
+dmaa <- read.csv("Top25dmaas.csv") 
+betaAlanine <- read.csv("Top25beta-alanines.csv") 
+monohydrate <- read.csv("Top25monohydrates.csv") 
+nitricOxide <- read.csv("Top25nitric-oxides.csv") 
+adaptogenBlend <- read.csv("Top25adaptogen-blends.csv") 
+yohimbe <- read.csv("Top25yohimbes.csv") 
+schisandraChinensis <- read.csv("Top25schisandra-chinensiss.csv") 
+betaineAnhydrous <- read.csv("Top25betaine-anhydrouss.csv") 
+milkProteinIsolate <- read.csv("Top25milk-protein-isolates.csv") 
+wheyProteinIsolate <- read.csv("Top25whey-protein-isolates.csv") 
+
+```
+
+
+
+```{r}
+getProteinGenes('soy lecithin')
+getProteinGenes('carrageenan')
+getProteinGenes('dextrin')
+getProteinGenes('acesulfame potassium')
+getProteinGenes('sucralose')
+getProteinGenes('glycerine')
+getProteinGenes('hydroxyethyl cellulose')
+getProteinGenes('chlorhexidine gluconate')
+getProteinGenes('methylparaben')
+getProteinGenes('gluconolactone')
+getProteinGenes('sodium hydroxide')
+getProteinGenes('propylene-glycol')
+getProteinGenes('peg-8')
+getProteinGenes('hydroxypropylcellulose')
+getProteinGenes('gun powder')
+```
+
+
+```{r}
+soyLecithin <- read.csv("Top25soy-lecithins.csv") 
+carrageenan <- read.csv("Top25carrageenans.csv") 
+dextrin <- read.csv("Top25dextrins.csv") 
+acesulfamePotassium <- read.csv("Top25acesulfame-potassiums.csv") 
+sucralose <- read.csv("Top25sucraloses.csv") 
+gluconolactone <- read.csv("Top25gluconolactones.csv")
+sodiumHydroxide <- read.csv("Top25sodium-hydroxides.csv")
+propyleneGlycol <- read.csv("Top25propylene-glycols.csv")
+gunPowder <- read.csv("Top25gun-powders.csv") 
+
+```
+
+
+
+```{r}
+getProteinGenes('tear gas')
+getProteinGenes('crying')
+getProteinGenes('pepper spray')
+getProteinGenes('neuroma')
+getProteinGenes('fibromyalgia')
+getProteinGenes('eucalyptus')
+getProteinGenes('bug spray')
+getProteinGenes('rosemary')
+getProteinGenes('deet')
+getProteinGenes('butane')
+getProteinGenes('propane')
+getProteinGenes('isobutane')
+getProteinGenes('ethanol')
+getProteinGenes('corn starch')
+getProteinGenes('magnesium carbonate')
+```
+
+
+```{r}
+tearGas <- read.csv("Top25tear-gass.csv") 
+crying <- read.csv("Top25cryings.csv") 
+pepperSpray <- read.csv("Top25pepper-sprays.csv") 
+neuroma <- read.csv("Top25neuromas.csv") 
+fibromyalgia <- read.csv("Top25fibromyalgias.csv") 
+eucalyptus <- read.csv("Top25eucalyptuss.csv") 
+bugSpray <- read.csv("Top25bug-sprays.csv") 
+rosemary <- read.csv("Top25rosemarys.csv") 
+deet <- read.csv("Top25deets.csv") 
+butane <- read.csv("Top25butanes.csv") 
+propane <- read.csv("Top25propanes.csv") 
+isobutane <- read.csv("Top25isobutanes.csv") 
+ethanol <- read.csv("Top25ethanols.csv") 
+cornStarch <- read.csv("Top25corn-starchs.csv") 
+magnesiumCarbonate <- read.csv("Top25magnesium-carbonates.csv") 
+
+```
+
+
+
+
+```{r}
+getProteinGenes('isopropyl myristate')
+getProteinGenes('aminomethyl propanol')
+getProteinGenes('sodium benzoate')
+getProteinGenes('anesthesia')
+getProteinGenes('intra uterine device')
+getProteinGenes('polyurethane') 
+getProteinGenes('demerol') 
+
+```
+
+```{r}
+isopropylMyristate <- read.csv("Top25isopropyl-myristates.csv") 
+aminomethylPropanol <- read.csv("Top25aminomethyl-propanols.csv") 
+sodiumBenzoate <- read.csv("Top25sodium-benzoates.csv") 
+anesthesia <- read.csv("Top25anesthesias.csv") 
+iud <- read.csv("Top25intra-uterine-devices.csv") 
+polyurethane <- read.csv("Top25polyurethanes.csv") 
+demerol <- read.csv("Top25demerols.csv") 
+
+```
+
+
+```{r}
+for (i in zucchini$proteinType[1:5]){
+  getSummaries2(i,'zucchini')
+}
+
+for (i in yohimbe$proteinType[1:5]){
+  getSummaries2(i,'yohimbe')
+}
+
+for (i in yerbaMate$proteinType[1:3]){
+  getSummaries2(i,'yerba mate')
+}
+
+for (i in yeastInfection$proteinType[1:5]){
+  getSummaries2(i,'yeast infection')
+}
+
+for (i in yams$proteinType[1:5]){
+  getSummaries2(i,'yams')
+}
+
+for (i in xanax$proteinType[1:5]){
+  getSummaries2(i,'xanax')
+}
+
+for (i in wheyProteinIsolate$proteinType[1:5]){
+  getSummaries2(i,'whey protein isolate')
+}
+
+for (i in weedKiller$proteinType[1:5]){
+  getSummaries2(i,'weed killer')
+}
+
+for (i in weedEater$proteinType[1]){
+  getSummaries2(i,'weed eater')
+}
+
+for (i in watermelon$proteinType[1:5]){
+  getSummaries2(i,'watermelon')
+}
+
+for (i in walnuts$proteinType[1:5]){
+  getSummaries2(i,'walnuts')
+}
+
+for (i in visine$proteinType[1:5]){
+  getSummaries2(i,'visine')
+}
+
+for (i in vicodine$proteinType[1:5]){
+  getSummaries2(i,'vicodine')
+}
+
+for (i in vaginalDryness$proteinType[1:5]){
+  getSummaries2(i,'vaginal dryness')
+}
+
+for (i in tylenolPM$proteinType[1:5]){
+  getSummaries2(i,'tylenol PM')
+}
+
+for (i in turnipGreens$proteinType[1:5]){
+  getSummaries2(i,'turnip greens')
+}
+
+for (i in turmeric$proteinType[1:5]){
+  getSummaries2(i,'turmeric')
+}
+
+for (i in tuberculosis$proteinType[1:5]){
+  getSummaries2(i,'tuberculosis')
+}
+
+for (i in tearGas$proteinType[1:5]){
+  getSummaries2(i,'tear gas')
+}
+
+for (i in tannins$proteinType[1:5]){
+  getSummaries2(i,'tannins')
+}
+
+for (i in talc$proteinType[1:5]){
+  getSummaries2(i,'talc')
+}
+
+for (i in syphilis$proteinType[1:5]){
+  getSummaries2(i,'syphilis')
+}
+
+for (i in sweetPotato$proteinType[1:5]){
+  getSummaries2(i,'sweet potato')
+}
+
+for (i in sunflowerSeeds$proteinType[1:5]){
+  getSummaries2(i,'sunflower seeds')
+}
+
+
+```
+
+```{r}
+getGeneSummaries('zucchini')
+getGeneSummaries('yohimbe')
+getGeneSummaries('yerba mate')
+getGeneSummaries('yeast infection')
+getGeneSummaries('yams')
+getGeneSummaries('xanax')
+getGeneSummaries('whey protein isolate')
+getGeneSummaries('weed killer')
+getGeneSummaries('weed eater')
+getGeneSummaries('watermelon')
+getGeneSummaries('walnuts')
+getGeneSummaries('visine')
+getGeneSummaries('vicodine')
+getGeneSummaries('vaginal dryness')
+getGeneSummaries('tylenol pm')
+getGeneSummaries('turnip greens')
+getGeneSummaries('turmeric')
+getGeneSummaries('tuberculosis')
+getGeneSummaries('tear gas')
+getGeneSummaries('tannins')
+getGeneSummaries('talc')
+getGeneSummaries('syphilis')
+getGeneSummaries('sweet potato')
+getGeneSummaries('sunflower seeds')
+
+
+```
+
+```{r}
+sunflowerSeedsSumms <- read.csv("proteinGeneSummaries_sunflower-seeds.csv")
+sweetPotatoSumms <- read.csv("proteinGeneSummaries_sweet-potato.csv")
+syphilisSumms <- read.csv("proteinGeneSummaries_syphilis.csv")
+talcSumms <- read.csv("proteinGeneSummaries_talc.csv")
+tanninsSumms <- read.csv("proteinGeneSummaries_tannins.csv")
+tearGasSumms <- read.csv("proteinGeneSummaries_tear-gas.csv")
+tuberculosisSumms <- read.csv("proteinGeneSummaries_tuberculosis.csv")
+turmericSumms <- read.csv("proteinGeneSummaries_turmeric.csv")
+turnipGreensSumms <- read.csv("proteinGeneSummaries_turnip-greens.csv")
+tylenolPMSumms <- read.csv("proteinGeneSummaries_tylenol-pm.csv")
+vaginalDrynessSumms <- read.csv("proteinGeneSummaries_vaginal-dryness.csv")
+vicodineSumms <- read.csv("proteinGeneSummaries_vicodine.csv")
+visineSumms <- read.csv("proteinGeneSummaries_visine.csv")
+walnutsSumms <- read.csv("proteinGeneSummaries_walnuts.csv")
+watermelonSumms <- read.csv("proteinGeneSummaries_watermelon.csv")
+weedEaterSumms <- read.csv("proteinGeneSummaries_weed-eater.csv")
+weedKillerSumms <- read.csv("proteinGeneSummaries_weed-killer.csv")
+wheyProteinIsolateSumms <- read.csv("proteinGeneSummaries_whey-protein-isolate.csv")
+xanaxSumms <- read.csv("proteinGeneSummaries_xanax.csv")
+yamsSumms <- read.csv("proteinGeneSummaries_yams.csv")
+yeastInfectionSumms <- read.csv("proteinGeneSummaries_yeast-infection.csv")
+yerbaMateSumms <- read.csv("proteinGeneSummaries_yerba-mate.csv")
+yohimbeSumms <- read.csv("proteinGeneSummaries_yohimbe.csv")
+zucchiniSumms <- read.csv("proteinGeneSummaries_zucchini.csv")
+
+```
+
+
+```{r}
+for (i in sudafed$proteinType[1:5]){
+  getSummaries2(i,'sudafed')
+}
+
+for (i in sucralose$proteinType[1:5]){
+  getSummaries2(i,'sucralose')
+}
+
+for (i in strawberries$proteinType[1:5]){
+  getSummaries2(i,'strawberries')
+}
+
+for (i in stJohnsWart$proteinType[1:5]){
+  getSummaries2(i,'st johns wart')
+}
+
+for (i in stearylAlcohol$proteinType[1:5]){
+  getSummaries2(i,'stearyl alcohol')
+}
+
+for (i in starFruit$proteinType[1]){
+  getSummaries2(i,'star fruit')
+}
+
+for (i in squash$proteinType[1:5]){
+  getSummaries2(i,'squash')
+}
+
+for (i in spermicide$proteinType[1:5]){
+  getSummaries2(i,'spermicide')
+}
+
+for (i in soyLecithin$proteinType[1:5]){
+  getSummaries2(i,'soy lecithin')
+}
+
+for (i in soy$proteinType[1:5]){
+  getSummaries2(i,'soy')
+}
+
+for (i in sodiumHydroxide$proteinType[1:5]){
+  getSummaries2(i,'sodium hydroxide')
+}
+
+for (i in sodiumBenzoate$proteinType[1:5]){
+  getSummaries2(i,'sodium benzoate')
+}
+
+for (i in silicone$proteinType[1:5]){
+  getSummaries2(i,'silicone')
+}
+
+for (i in shingles$proteinType[1:5]){
+  getSummaries2(i,'shingles')
+}
+
+for (i in sexLubricant$proteinType[1:5]){
+  getSummaries2(i,'sex lubricant')
+}
+
+for (i in sesameSeeds$proteinType[1:5]){
+  getSummaries2(i,'sesame seeds')
+}
+```
+
+```{r}
+getGeneSummaries('sudafed')
+getGeneSummaries('sucralose')
+getGeneSummaries('strawberries')
+getGeneSummaries('st johns wart')
+getGeneSummaries('stearyl alcohol')
+getGeneSummaries('star fruit')
+getGeneSummaries('squash')
+getGeneSummaries('spermicide')
+getGeneSummaries('soy lecithin')
+getGeneSummaries('soy')
+getGeneSummaries('sodium hydroxide')
+getGeneSummaries('sodium benzoate')
+getGeneSummaries('silicone')
+getGeneSummaries('shingles')
+getGeneSummaries('sex lubricant')
+getGeneSummaries('sudafed')
+getGeneSummaries('sudafed')
+getGeneSummaries('sesame seeds')
+
+```
+
+
+```{r}
+sudafedSumms <- read.csv("proteinGeneSummaries_sudafed.csv")
+sucraloseSumms <- read.csv("proteinGeneSummaries_sucralose.csv")
+strawberriesSumms <- read.csv("proteinGeneSummaries_strawberries.csv")
+stJohnsWartSumms <- read.csv("proteinGeneSummaries_st-johns-wart.csv")
+stearylAlcoholSumms <- read.csv("proteinGeneSummaries_stearyl-alcohol.csv")
+starFruitSumms <- read.csv("proteinGeneSummaries_star-fruit.csv")
+squashSumms <- read.csv("proteinGeneSummaries_squash.csv")
+spermicideSumms <- read.csv("proteinGeneSummaries_spermicide.csv")
+soyLecithinSumms <- read.csv("proteinGeneSummaries_soy-lecithin.csv")
+soySumms <- read.csv("proteinGeneSummaries_soy.csv")
+sodiumHydroxideSumms <- read.csv("proteinGeneSummaries_sodium-hydroxide.csv")
+sodiumBenzoateSumms <- read.csv("proteinGeneSummaries_sodium-benzoate.csv")
+siliconeSumms <- read.csv("proteinGeneSummaries_silicone.csv")
+shinglesSumms <- read.csv("proteinGeneSummaries_shingles.csv")
+sexLubricantSumms <- read.csv("proteinGeneSummaries_sex-lubricant.csv")
+sesameSeedsSumms <- read.csv("proteinGeneSummaries_sesame-seeds.csv")
+```
+
+
+
+```{r}
+for (i in schisandraChinensis$proteinType[1:5]){
+  getSummaries2(i,'schisandra chinensis')
+}
+
+for (i in salmon$proteinType[1:5]){
+  getSummaries2(i,'salmon')
+}
+
+for (i in rosemary$proteinType[1:5]){
+  getSummaries2(i,'rosemary')
+}
+
+for (i in rohypnol$proteinType[1:5]){
+  getSummaries2(i,'rohypnol')
+}
+
+for (i in redOnions$proteinType[1:5]){
+  getSummaries2(i,'red onions')
+}
+
+for (i in redFennel$proteinType[1:5]){
+  getSummaries2(i,'red fennel')
+}
+
+for (i in rayon$proteinType[1:5]){
+  getSummaries2(i,'rayon')
+}
+
+for (i in pumpkin$proteinType[1:5]){
+  getSummaries2(i,'pumpkin')
+}
+
+for (i in psychedelic$proteinType[1:4]){
+  getSummaries2(i,'psychedelic')
+}
+
+for (i in propyleneGlycol$proteinType[1:5]){
+  getSummaries2(i,'propylene glycol')
+}
+
+for (i in propane$proteinType[1:5]){
+  getSummaries2(i,'propane')
+}
+
+for (i in polyurethane$proteinType[1:5]){
+  getSummaries2(i,'polyurethane')
+}
+
+for (i in polypropylene$proteinType[1:5]){
+  getSummaries2(i,'polypropylene')
+}
+
+for (i in polyethylene$proteinType[1:5]){
+  getSummaries2(i,'polyethylene')
+}
+
+for (i in polyester$proteinType[1:5]){
+  getSummaries2(i,'polyester')
+}
+
+```
+
+```{r}
+getGeneSummaries('schisandra chinensis')
+getGeneSummaries('salmon')
+getGeneSummaries('rosemary')
+getGeneSummaries('rohypnol')
+getGeneSummaries('red onions')
+getGeneSummaries('red fennel')
+getGeneSummaries('rayon')
+getGeneSummaries('pumpkin')
+getGeneSummaries('psychedelic')
+getGeneSummaries('propylene glycol')
+getGeneSummaries('propane')
+getGeneSummaries('polyurethane')
+getGeneSummaries('polypropylene')
+getGeneSummaries('polyethylene')
+getGeneSummaries('polyester')
+
+
+```
+
+```{r}
+polyesterSumms <- read.csv("proteinGeneSummaries_polyester.csv")
+polyethyleneSumms <- read.csv("proteinGeneSummaries_polyethylene.csv")
+polypropyleneSumms <- read.csv("proteinGeneSummaries_polypropylene.csv")
+polyurethaneSumms <- read.csv("proteinGeneSummaries_polyurethane.csv")
+propaneSumms <- read.csv("proteinGeneSummaries_propane.csv")
+propyleneGlycolSumms <- read.csv("proteinGeneSummaries_propylene-glycol.csv")
+psychedelicSumms <- read.csv("proteinGeneSummaries_psychedelic.csv")
+pumpkinSumms <- read.csv("proteinGeneSummaries_pumpkin.csv")
+rayonSumms <- read.csv("proteinGeneSummaries_rayon.csv")
+redFennelSumms <- read.csv("proteinGeneSummaries_red-fennel.csv")
+redOnionsSumms <- read.csv("proteinGeneSummaries_red-onions.csv")
+rohypnolSumms <- read.csv("proteinGeneSummaries_rohypnol.csv")
+rosemarySumms <- read.csv("proteinGeneSummaries_rosemary.csv")
+salmonSumms <- read.csv("proteinGeneSummaries_salmon.csv")
+schisandraChinensisSumms <- read.csv("proteinGeneSummaries_schisandra-chinensis.csv")
+
+
+```
+
+
+```{r}
+for (i in polycarbophil$proteinType[1:5]){
+  getSummaries2(i,'polycarbophil')
+}
+
+for (i in plums$proteinType[1:5]){
+  getSummaries2(i,'plums')
+}
+
+for (i in pistachio$proteinType[1:5]){
+  getSummaries2(i,'pistachio')
+}
+
+for (i in pineNuts$proteinType[1:5]){
+  getSummaries2(i,'pine nuts')
+}
+
+for (i in pineapple$proteinType[1:5]){
+  getSummaries2(i,'pineapple')
+}
+
+for (i in perfume$proteinType[1:5]){
+  getSummaries2(i,'perfume')
+}
+
+for (i in pepperSpray$proteinType[1:5]){
+  getSummaries2(i,'pepper spray')
+}
+
+for (i in peppers$proteinType[1:5]){
+  getSummaries2(i,'peppers')
+}
+
+for (i in peppercorn$proteinType[1:3]){
+  getSummaries2(i,'peppercorn')
+}
+
+for (i in peg8$proteinType[1:5]){
+  getSummaries2(i,'peg-8')
+}
+
+for (i in pecans$proteinType[1:3]){
+  getSummaries2(i,'pecans')
+}
+
+for (i in peas$proteinType[1:5]){
+  getSummaries2(i,'peas')
+}
+
+for (i in peanuts$proteinType[1:5]){
+  getSummaries2(i,'peanuts')
+}
+
+for (i in parfum$proteinType){
+  getSummaries2(i,'parfum')
+}
+
+for (i in papayaSeeds$proteinType[1:5]){
+  getSummaries2(i,'papaya seeds')
+}
+
+for (i in papaya$proteinType[1:5]){
+  getSummaries2(i,'papaya')
+}
+
+```
+
+```{r}
+getGeneSummaries('polycarbophil')
+getGeneSummaries('plums')
+getGeneSummaries('pistachio')
+getGeneSummaries('pine nuts')
+getGeneSummaries('pineapple')
+getGeneSummaries('perfume')
+getGeneSummaries('pepper spray')
+getGeneSummaries('peppers')
+getGeneSummaries('peppercorn')
+getGeneSummaries('peg-8')
+getGeneSummaries('pecans')
+getGeneSummaries('peas')
+getGeneSummaries('peanuts')
+getGeneSummaries('parfum')
+getGeneSummaries('papaya seeds')
+getGeneSummaries('papaya')
+
+
+```
+
+```{r}
+polycarbophilSumms <- read.csv("proteinGeneSummaries_polycarbophil.csv")
+plumsSumms <- read.csv("proteinGeneSummaries_plums.csv")
+pistachioSumms <- read.csv("proteinGeneSummaries_pistachio.csv")
+pineNutsSumms <- read.csv("proteinGeneSummaries_pine-nuts.csv")
+pineappleSumms <- read.csv("proteinGeneSummaries_pineapple.csv")
+perfumeSumms <- read.csv("proteinGeneSummaries_perfume.csv")
+pepperSpraySumms <- read.csv("proteinGeneSummaries_pepper-spray.csv")
+peppersSumms <- read.csv("proteinGeneSummaries_peppers.csv")
+peppercornSumms <- read.csv("proteinGeneSummaries_peppercorn.csv")
+peg8Summs <- read.csv("proteinGeneSummaries_peg-8.csv")
+pecansSumms <- read.csv("proteinGeneSummaries_pecans.csv")
+peasSumms <- read.csv("proteinGeneSummaries_peas.csv")
+peanutsSumms <- read.csv("proteinGeneSummaries_peanuts.csv")
+parfumSumms <- read.csv("proteinGeneSummaries_parfum.csv")
+papayaSeedsSumms <- read.csv("proteinGeneSummaries_papaya-seeds.csv")
+papayaSumms <- read.csv("proteinGeneSummaries_papaya.csv")
+
+```
+
+
+```{r}
+for (i in oregano$proteinType[1:4]){
+  getSummaries2(i,'oregano')
+}
+
+for (i in orange$proteinType[1:5]){
+  getSummaries2(i,'orange')
+}
+
+for (i in opiates$proteinType[1:5]){
+  getSummaries2(i,'opiates')
+}
+
+for (i in onions$proteinType[1:5]){
+  getSummaries2(i,'onions')
+}
+
+for (i in okra$proteinType[1:3]){
+  getSummaries2(i,'okra')
+}
+
+for (i in norepinephrine$proteinType[1:5]){
+  getSummaries2(i,'norepinephrine')
+}
+
+for (i in nitricOxide$proteinType[1:5]){
+  getSummaries2(i, 'nitric oxide')
+}
+
+for (i in nicotine$proteinType[1:5]){
+  getSummaries2(i,'nicotine')
+}
+
+for (i in neuroma$proteinType[1:5]){
+  getSummaries2(i,'neuroma')
+}
+
+for (i in mushrooms$proteinType[1:5]){
+  getSummaries2(i,'mushrooms')
+}
+
+for (i in mononucleosis$proteinType[1:5]){
+  getSummaries2(i, 'mononucleosis')
+}
+
+for (i in monohydrate$proteinType[1:5]){
+  getSummaries2(i,'monohydrate')
+}
+
+for (i in mineralOil$proteinType[1:5]){
+  getSummaries2(i,'mineral oil')
+}
+
+for (i in milkProteinIsolate$proteinType[1:5]){
+  getSummaries2(i,'milk protein isolate')
+}
+
+for (i in miconazoleNitrate$proteinType[1:5]){
+  getSummaries2(i,'miconazole nitrate')
+}
+
+```
+
+```{r}
+getGeneSummaries('miconazole nitrate')
+getGeneSummaries('milk protein isolate')
+getGeneSummaries('mineral oil')
+getGeneSummaries('monohydrate')
+getGeneSummaries('mononucleosis')
+getGeneSummaries('mushrooms')
+getGeneSummaries('neuroma')
+getGeneSummaries('nicotine')
+getGeneSummaries('nitric oxide')
+getGeneSummaries('norepinephrine')
+getGeneSummaries('okra')
+getGeneSummaries('onions')
+getGeneSummaries('opiates')
+getGeneSummaries('orange')
+getGeneSummaries('oregano')
+
+```
+
+```{r}
+miconazoleNitrateSumms <- read.csv("proteinGeneSummaries_miconazole-nitrate.csv")
+milkProteinIsolateSumms <- read.csv("proteinGeneSummaries_milk-protein-isolate.csv")
+mineralOilSumms <- read.csv("proteinGeneSummaries_mineral-oil.csv")
+monohydrateSumms <- read.csv("proteinGeneSummaries_monohydrate.csv")
+mononucleosisSumms <- read.csv("proteinGeneSummaries_mononucleosis.csv")
+mushroomsSumms <- read.csv("proteinGeneSummaries_mushrooms.csv")
+neuromaSumms <- read.csv("proteinGeneSummaries_neuroma.csv")
+nicotineSumms <- read.csv("proteinGeneSummaries_nicotine.csv")
+nitricOxideSumms <- read.csv("proteinGeneSummaries_nitric-oxide.csv")
+norepinephrineSumms <- read.csv("proteinGeneSummaries_norepinephrine.csv")
+okraSumms <- read.csv("proteinGeneSummaries_okra.csv")
+onionsSumms <- read.csv("proteinGeneSummaries_onions.csv")
+opiatesSumms <- read.csv("proteinGeneSummaries_opiates.csv")
+orangeSumms <- read.csv("proteinGeneSummaries_orange.csv")
+oreganoSumms <- read.csv("proteinGeneSummaries_oregano.csv")
+
+```
+
+
+
+
+```{r}
+for (i in methylparaben$proteinType[1:5]){
+  getSummaries2(i,'methylparaben')
+}
+
+for (i in meth$proteinType[1:5]){
+  getSummaries2(i,'methamphetamines')
+}
+
+for (i in mdma$proteinType[1:5]){
+  getSummaries2(i,'mdma')
+}
+
+for (i in matches$proteinType[1:5]){
+  getSummaries2(i,'matches')
+}
+
+for (i in mapleSyrup$proteinType[1:5]){
+  getSummaries2(i,'maple syrup')
+}
+
+for (i in mango$proteinType[1:5]){
+  getSummaries2(i,'mango')
+}
+
+for (i in malaria$proteinType[1:5]){
+  getSummaries2(i,'malaria')
+}
+
+for (i in magnesiumCarbonate$proteinType[1:5]){
+  getSummaries2(i,'magnesium carbonate')
+}
+
+for (i in macadamiaNuts$proteinType[1:3]){
+  getSummaries2(i,'macadamia nuts')
+}
+
+for (i in lime$proteinType[1:5]){
+  getSummaries2(i,'lime')
+}
+
+for (i in lentils$proteinType[1:5]){
+  getSummaries2(i,'lentils')
+}
+
+for (i in lemon$proteinType[1:5]){
+  getSummaries2(i,'lemon')
+}
+
+for (i in latex$proteinType[1:5]){
+  getSummaries2(i,'latex')
+}
+
+for (i in ketamine$proteinType[1:5]){
+  getSummaries2(i,'ketamine')
+}
+
+for (i in kale$proteinType[1:5]){
+  getSummaries2(i,'kale')
+}
+
+```
+
+```{r}
+getGeneSummaries('methylparaben')
+getGeneSummaries('methamphetamines')
+getGeneSummaries('mdma')
+getGeneSummaries('matches')
+getGeneSummaries('maple syrup')
+getGeneSummaries('mango')
+getGeneSummaries('malaria')
+getGeneSummaries('magnesium carbonate')
+getGeneSummaries('macadamia nuts')
+getGeneSummaries('lime')
+getGeneSummaries('lentils')
+getGeneSummaries('lemon')
+getGeneSummaries('latex')
+getGeneSummaries('ketamine')
+getGeneSummaries('kale')
+
+```
+
+```{r}
+methylparabenSumms <- read.csv("proteinGeneSummaries_methylparaben.csv")
+methSumms <- read.csv("proteinGeneSummaries_methamphetamines.csv")
+mdmaSumms <- read.csv("proteinGeneSummaries_mdma.csv")
+matchesSumms <- read.csv("proteinGeneSummaries_matches.csv")
+mapleSyrupSumms <- read.csv("proteinGeneSummaries_maple-syrup.csv")
+mangoSumms <- read.csv("proteinGeneSummaries_mango.csv")
+malariaSumms <- read.csv("proteinGeneSummaries_malaria.csv")
+magnesiumCarbonateSumms <- read.csv("proteinGeneSummaries_magnesium-carbonate.csv")
+macadamiaNutsSumms <- read.csv("proteinGeneSummaries_macadamia-nuts.csv")
+limeSumms <- read.csv("proteinGeneSummaries_lime.csv")
+lentilsSumms <- read.csv("proteinGeneSummaries_lentils.csv")
+lemonSumms <- read.csv("proteinGeneSummaries_lemon.csv")
+latexSumms <- read.csv("proteinGeneSummaries_latex.csv")
+ketamineSumms <- read.csv("proteinGeneSummaries_ketamine.csv")
+kaleSumms <- read.csv("proteinGeneSummaries_kale.csv")
+
+```
+
+
+```{r}
+for (i in jasmine$proteinType[1:4]){
+  getSummaries2(i,'jasmine')
+}
+
+for (i in jackfruit$proteinType[1:5]){
+  getSummaries2(i,'jackfruit')}
+
+for (i in iud$proteinType[1:5]){
+  getSummaries2(i,'intra uterine device')}
+
+for (i in isopropylPalmitate$proteinType[1:5]){
+  getSummaries2(i,'isopropyl palmitate')}
+
+for (i in isopropylMyristate$proteinType[1:5]){
+  getSummaries2(i,'isopropyl myristate')}
+
+for (i in isobutane$proteinType[1]){
+  getSummaries2(i,'isobutane')}
+
+for (i in incontinence$proteinType[1:5]){
+  getSummaries2(i,'incontinence')}
+
+for (i in hydroxypropylCellulose$proteinType[1:5]){
+  getSummaries2(i,'hydroxypropyl cellulose')}
+
+for (i in hydroxyethylCellulose$proteinType[1:5]){
+  getSummaries2(i,'hydroxyethyl cellulose')}
+
+for (i in hydrogenatedPalmOilGlyceride$proteinType[1:5]){
+  getSummaries2(i,'hydrogenated palm oil glyceride')}
+
+for (i in hydrogenatedCastorOil$proteinType[1:5]){
+  getSummaries2(i,'hydrogenated castor oil')}
+
+for (i in herpes2$proteinType[1:5]){
+  getSummaries2(i,'herpes simplex 2')}
+
+for (i in herpes1$proteinType[1:5]){
+  getSummaries2(i,'herpes simplex 1')}
+
+for (i in heroin$proteinType[1:5]){
+  getSummaries2(i,'heroin')}
+  
+for (i in hazelnuts$proteinType[1:5]){
+  getSummaries2(i,'hazel nuts')}
+
+
+```
+
+```{r}
+getGeneSummaries('hazel nuts')
+getGeneSummaries('heroin')
+getGeneSummaries('herpes simplex 1')
+getGeneSummaries('herpes simplex 2')
+getGeneSummaries('hydrogenated castor oil')
+getGeneSummaries('hydrogenated palm oil glyceride')
+getGeneSummaries('hydroxyethyl cellulose')
+getGeneSummaries('hydroxypropyl cellulose')
+getGeneSummaries('incontinence')
+getGeneSummaries('isobutane')
+getGeneSummaries('isopropyl myristate')
+getGeneSummaries('isopropyl palmitate')
+getGeneSummaries('intra uterine device')
+getGeneSummaries('jackfruit')
+getGeneSummaries('jasmine')
+
+```
+
+
+```{r}
+hazelnutsSumms <- read.csv("proteinGeneSummaries_hazel-nuts.csv")
+heroinSumms <- read.csv("proteinGeneSummaries_heroin.csv")
+herpes1Summs <- read.csv("proteinGeneSummaries_herpes-simplex-1.csv")
+herpes2Summs <- read.csv("proteinGeneSummaries_herpes-simplex-2.csv")
+hydrogenatedCastorOilSumms <- read.csv("proteinGeneSummaries_hydrogenated-castor-oil.csv")
+hydrogenatedPalmOilGlycerideSumms <- read.csv("proteinGeneSummaries_hydrogenated-palm-oil-glyceride.csv")
+hydroxyethylCelluloseSumms <- read.csv("proteinGeneSummaries_hydroxyethyl-cellulose.csv")
+hydroxypropylCelluloseSumms <- read.csv("proteinGeneSummaries_hydroxypropyl-cellulose.csv")
+incontinenceSumms <- read.csv("proteinGeneSummaries_incontinence.csv")
+isobutaneSumms <- read.csv("proteinGeneSummaries_isobutane.csv")
+isopropylMyristateSumms <- read.csv("proteinGeneSummaries_isopropyl-myristate.csv")
+isopropylPalmitateSumms <- read.csv("proteinGeneSummaries_isopropyl-palmitate.csv")
+iudSumms <- read.csv("proteinGeneSummaries_intra-uterine-device.csv")
+jackfruitSumms <- read.csv("proteinGeneSummaries_jackfruit.csv")
+jasmineSumms <- read.csv("proteinGeneSummaries_jasmine.csv")
+
+```
+
+
+
+```{r}
+for (i in gunPowder$proteinType[1:5]){
+  getSummaries2(i,'gun powder')}
+
+for (i in greenTea$proteinType[1:5]){
+  getSummaries2(i,'green tea')}
+
+for (i in greenOnions$proteinType[1:5]){
+  getSummaries2(i,'green onions')}
+
+for (i in greenBeans$proteinType[1:5]){
+  getSummaries2(i,'green beans')}
+
+for (i in grapefruit$proteinType[1:5]){
+  getSummaries2(i,'grapefruit')}
+
+for (i in gonorrhea$proteinType[1:5]){
+  getSummaries2(i,'gonorrhea')}
+
+for (i in goldenseal$proteinType[1:5]){
+  getSummaries2(i,'golden seal')}
+
+for (i in glycerine$proteinType[1:5]){
+  getSummaries2(i,'glycerine')}
+
+for (i in gluconolactone$proteinType[1:5]){
+  getSummaries2(i,'gluconolactone')}
+
+for (i in ginseng$proteinType[1:5]){
+  getSummaries2(i,'ginseng')}
+
+for (i in gingkoBiloba$proteinType[1:5]){
+  getSummaries2(i,'gingko biloba')}
+
+for (i in ginger$proteinType[1:5]){
+  getSummaries2(i,'ginger')}
+
+for (i in ghb$proteinType[1:5]){
+  getSummaries2(i,'ghb')}
+
+for (i in gelatin$proteinType[1:5]){
+  getSummaries2(i,'gelatin')}
+
+for (i in garlic$proteinType[1:5]){
+  getSummaries2(i,'garlic')}
+
+for (i in flavanoids$proteinType[1:5]){
+  getSummaries2(i,'flavanoids')}
+
+for (i in figs$proteinType[1:5]){
+  getSummaries2(i,'figs')}
+
+```
+
+```{r}
+getGeneSummaries('gun powder')
+getGeneSummaries('green tea')
+getGeneSummaries('green onions')
+getGeneSummaries('green beans')
+getGeneSummaries('grapefruit')
+getGeneSummaries('gonorrhea')
+getGeneSummaries('golden seal')
+getGeneSummaries('glycerine')
+getGeneSummaries('gluconolactone')
+getGeneSummaries('ginseng')
+getGeneSummaries('gingko biloba')
+getGeneSummaries('ginger')
+getGeneSummaries('ghb')
+getGeneSummaries('gelatin')
+getGeneSummaries('garlic')
+getGeneSummaries('flavanoids')
+getGeneSummaries('figs')
+
+```
+
+```{r}
+gunPowderSumms <- read.csv("proteinGeneSummaries_gun-powder.csv")
+greenTeaSumms <- read.csv("proteinGeneSummaries_green-tea.csv")
+greenOnionsSumms <- read.csv("proteinGeneSummaries_green-onions.csv")
+greenBeansSumms <- read.csv("proteinGeneSummaries_green-beans.csv")
+grapefruitSumms <- read.csv("proteinGeneSummaries_grapefruit.csv")
+gonorrheaSumms <- read.csv("proteinGeneSummaries_gonorrhea.csv")
+goldensealSumms <- read.csv("proteinGeneSummaries_golden-seal.csv")
+glycerineSumms <- read.csv("proteinGeneSummaries_glycerine.csv")
+gluconolactoneSumms <- read.csv("proteinGeneSummaries_gluconolactone.csv")
+ginsengSumms <- read.csv("proteinGeneSummaries_ginseng.csv")
+gingkoBilobaSumms <- read.csv("proteinGeneSummaries_gingko-biloba.csv")
+gingerSumms <- read.csv("proteinGeneSummaries_ginger.csv")
+ghbSumms <- read.csv("proteinGeneSummaries_ghb.csv")
+gelatinSumms <- read.csv("proteinGeneSummaries_gelatin.csv")
+garlicSumms <- read.csv("proteinGeneSummaries_garlic.csv")
+flavanoidsSumms <- read.csv("proteinGeneSummaries_flavanoids.csv")
+figsSumms <- read.csv("proteinGeneSummaries_figs.csv")
+
+```
+
+
+
+```{r}
+for (i in fibromyalgia$proteinType[1:5]){
+  getSummaries2(i,'fibromyalgia')}
+
+for (i in fennel$proteinType[1:5]){
+  getSummaries2(i,'fennel')}
+
+for (i in eucalyptus$proteinType[1:5]){
+  getSummaries2(i,'eucalyptus')}
+
+for (i in ethanol$proteinType[1:5]){
+  getSummaries2(i,'ethanol')}
+
+for (i in epsteinBarr$proteinType[1:5]){
+  getSummaries2(i,'epstein barr virus')}
+
+for (i in epinephrine$proteinType[1:5]){
+  getSummaries2(i,'epinephrine')}
+
+for (i in eggPlant$proteinType[1:5]){
+  getSummaries2(i,'egg plant')}
+
+for (i in echinacea$proteinType[1:5]){
+  getSummaries2(i,'echinacea')}
+
+for (i in dmaa$proteinType[1:5]){
+  getSummaries2(i,'dmaa')}
+
+for (i in dextrin$proteinType[1:5]){
+  getSummaries2(i,'dextrin')}
+
+for (i in depression$proteinType[1:5]){
+  getSummaries2(i,'depression')}
+
+for (i in demerol$proteinType[1:5]){
+  getSummaries2(i,'demerol')}
+
+for (i in deet$proteinType[1:5]){
+  getSummaries2(i,'deet')}
+
+for (i in dates$proteinType[1:5]){
+  getSummaries2(i,'dates')}
+
+for (i in curry$proteinType[1:5]){
+  getSummaries2(i,'curry')}
+
+for (i in crying$proteinType[1:5]){
+  getSummaries2(i,'crying')}
+
+```
+
+
+```{r}
+getGeneSummaries('fibromyalgia')
+getGeneSummaries('fennel')
+getGeneSummaries('eucalyptus')
+getGeneSummaries('ethanol')
+getGeneSummaries('epstein barr virus')
+getGeneSummaries('epinephrine')
+getGeneSummaries('egg plant')
+getGeneSummaries('echinacea')
+getGeneSummaries('dmaa')
+getGeneSummaries('dextrin')
+getGeneSummaries('depression')
+getGeneSummaries('demerol')
+getGeneSummaries('deet')
+getGeneSummaries('dates')
+getGeneSummaries('curry')
+getGeneSummaries('crying')
+
+
+```
+
+
+```{r}
+fibromyalgiaSumms <- read.csv("proteinGeneSummaries_fibromyalgia.csv")
+fennelSumms <- read.csv("proteinGeneSummaries_fennel.csv")
+eucalyptusSumms <- read.csv("proteinGeneSummaries_eucalyptus.csv")
+ethanolSumms <- read.csv("proteinGeneSummaries_ethanol.csv")
+epsteinBarrSumms <- read.csv("proteinGeneSummaries_epstein-barr-virus.csv")
+epinephrineSumms <- read.csv("proteinGeneSummaries_epinephrine.csv")
+eggPlantSumms <- read.csv("proteinGeneSummaries_egg-plant.csv")
+echinaceaSumms <- read.csv("proteinGeneSummaries_echinacea.csv")
+dmaaSumms <- read.csv("proteinGeneSummaries_dmaa.csv")
+dextrinSumms <- read.csv("proteinGeneSummaries_dextrin.csv")
+depressionSumms <- read.csv("proteinGeneSummaries_depression.csv")
+demerolSumms <- read.csv("proteinGeneSummaries_demerol.csv")
+deetSumms <- read.csv("proteinGeneSummaries_deet.csv")
+datesSumms <- read.csv("proteinGeneSummaries_dates.csv")
+currySumms <- read.csv("proteinGeneSummaries_curry.csv")
+cryingSumms <- read.csv("proteinGeneSummaries_crying.csv")
+
+```
+
+
+```{r}
+for (i in cranberries$proteinType[1:5]){
+  getSummaries2(i,'cranberries')}
+
+for (i in cotton$proteinType[1:5]){
+  getSummaries2(i,'cotton')}
+
+for (i in cornStarch$proteinType[1:5]){
+  getSummaries2(i,'corn starch')}
+
+for (i in cornNuts$proteinType[1:5]){
+  getSummaries2(i,'corn nuts')}
+
+for (i in corn$proteinType[1:5]){
+  getSummaries2(i,'corn')}
+
+for (i in codeine$proteinType[1:5]){
+  getSummaries2(i,'codeine')}
+
+for (i in coconuts$proteinType[1:5]){
+  getSummaries2(i,'coconuts')}
+
+for (i in cocaine$proteinType[1:5]){
+  getSummaries2(i,'cocaine')}
+
+for (i in claritin$proteinType[1:5]){
+  getSummaries2(i,'claritin')}
+
+for (i in chocolate$proteinType[1:5]){
+  getSummaries2(i,'chocolate')}
+
+for (i in chlorhexidineGluconate$proteinType[1:5]){
+  getSummaries2(i,'chlorhexidine gluconate')}
+
+for (i in chlamydia$proteinType[1:5]){
+  getSummaries2(i,'chlamydia')}
+
+for (i in chestnuts$proteinType[1:5]){
+  getSummaries2(i,'chestnuts')}
+
+for (i in cherries$proteinType[1:5]){
+  getSummaries2(i,'cherries')}
+
+for (i in chamomile$proteinType[1:5]){
+  getSummaries2(i,'chamomile')}
+
+```
+
+
+```{r}
+getGeneSummaries('chamomile')
+getGeneSummaries('cherries')
+getGeneSummaries('chestnuts')
+getGeneSummaries('chlamydia')
+getGeneSummaries('chlorhexidine gluconate')
+getGeneSummaries('chocolate')
+getGeneSummaries('claritin')
+getGeneSummaries('cocaine')
+getGeneSummaries('coconuts')
+getGeneSummaries('codeine')
+getGeneSummaries('corn')
+getGeneSummaries('corn nuts')
+getGeneSummaries('corn starch')
+getGeneSummaries('cotton')
+getGeneSummaries('cranberries')
+
+```
+
+
+```{r}
+chamomileSumms <- read.csv("proteinGeneSummaries_chamomile.csv")
+cherriesSumms <- read.csv("proteinGeneSummaries_cherries.csv")
+chestnutsSumms <- read.csv("proteinGeneSummaries_chestnuts.csv")
+chlamydiaSumms <- read.csv("proteinGeneSummaries_chlamydia.csv")
+chlorhexidineGluconateSumms <- read.csv("proteinGeneSummaries_chlorhexidine-gluconate.csv")
+chocolateSumms <- read.csv("proteinGeneSummaries_chocolate.csv")
+claritinSumms <- read.csv("proteinGeneSummaries_claritin.csv")
+cocaineSumms <- read.csv("proteinGeneSummaries_cocaine.csv")
+coconutsSumms <- read.csv("proteinGeneSummaries_coconuts.csv")
+codeineSumms <- read.csv("proteinGeneSummaries_codeine.csv")
+cornSumms <- read.csv("proteinGeneSummaries_corn.csv")
+cornNutsSumms <- read.csv("proteinGeneSummaries_corn-nuts.csv")
+cornStarchSumms <- read.csv("proteinGeneSummaries_corn-starch.csv")
+cottonSumms <- read.csv("proteinGeneSummaries_cotton.csv")
+cranberriesSumms <- read.csv("proteinGeneSummaries_cranberries.csv")
+
+```
+
+
+
+
+```{r}
+for (i in celery$proteinType[1:5]){
+  getSummaries2(i,'celery')}
+
+for (i in cashews$proteinType[1:5]){
+  getSummaries2(i,'cashews')}
+
+for (i in carrots$proteinType[1:5]){
+  getSummaries2(i,'carrots')}
+
+for (i in carrageenan$proteinType[1:5]){
+  getSummaries2(i,'carrageenan')}
+
+for (i in caraway$proteinType[1:2]){
+  getSummaries2(i,'caraway')}
+
+for (i in candles$proteinType[1:5]){
+  getSummaries2(i,'candles')}
+
+for (i in cabbage$proteinType[1:5]){
+  getSummaries2(i,'cabbage')}
+
+for (i in butane$proteinType[1:5]){
+  getSummaries2(i,'butane')}
+
+for (i in bugSpray$proteinType[1:5]){
+  getSummaries2(i,'bug spray')}
+
+for (i in broccoliSprouts$proteinType[1:5]){
+  getSummaries2(i,'broccoli sprouts')}
+
+for (i in broccoli$proteinType[1:5]){
+  getSummaries2(i,'broccoli')}
+
+for (i in brazilNuts$proteinType[1:5]){
+  getSummaries2(i,'brazil nuts')}
+
+for (i in bocChoi$proteinType[1:5]){
+  getSummaries2(i,'boc choi')}
+
+for (i in blueberries$proteinType[1:5]){
+  getSummaries2(i,'blueberries')}
+
+for (i in blackEyedPeas$proteinType[1:5]){
+  getSummaries2(i,'black eyed peas')}
+
+
+```
+
+
+```{r}
+getGeneSummaries('celery')
+getGeneSummaries('cashews')
+getGeneSummaries('carrots')
+getGeneSummaries('carrageenan')
+getGeneSummaries('caraway')
+getGeneSummaries('candles')
+getGeneSummaries('cabbage')
+getGeneSummaries('butane')
+getGeneSummaries('bug spray')
+getGeneSummaries('broccoli sprouts')
+getGeneSummaries('broccoli')
+getGeneSummaries('brazil nuts')
+getGeneSummaries('boc choi')
+getGeneSummaries('blueberries')
+getGeneSummaries('black eyed peas')
+
+
+```
+
+```{r}
+celerySumms <- read.csv("proteinGeneSummaries_celery.csv")
+cashewsSumms <- read.csv("proteinGeneSummaries_cashews.csv")
+carrotsSumms <- read.csv("proteinGeneSummaries_carrots.csv")
+carrageenanSumms <- read.csv("proteinGeneSummaries_carrageenan.csv")
+carawaySumms <- read.csv("proteinGeneSummaries_caraway.csv")
+candlesSumms <- read.csv("proteinGeneSummaries_candles.csv")
+cabbageSumms <- read.csv("proteinGeneSummaries_cabbage.csv")
+butaneSumms <- read.csv("proteinGeneSummaries_butane.csv")
+bugSpraySumms <- read.csv("proteinGeneSummaries_bug-spray.csv")
+broccoliSproutsSumms <- read.csv("proteinGeneSummaries_broccoli-sprouts.csv")
+broccoliSumms <- read.csv("proteinGeneSummaries_broccoli.csv")
+brazilNutsSumms <- read.csv("proteinGeneSummaries_brazil-nuts.csv")
+bocChoiSumms <- read.csv("proteinGeneSummaries_boc-choi.csv")
+blueberriesSumms <- read.csv("proteinGeneSummaries_blueberries.csv")
+blackEyedPeasSumms <- read.csv("proteinGeneSummaries_black-eyed-peas.csv")
+
+
+```
+
+
+
+```{r}
+for (i in blackberries$proteinType[1:5]){
+  getSummaries2(i,'blackberries')}
+
+for (i in birthContraceptive$proteinType[1:5]){
+  getSummaries2(i,'birth contraceptive')}
+
+for (i in bht$proteinType[1:5]){
+  getSummaries2(i,'bht')}
+
+for (i in betaineAnhydrous$proteinType[1:5]){
+  getSummaries2(i,'betaine anhydrous')}
+
+for (i in betaAlanine$proteinType[1:5]){
+  getSummaries2(i,'beta alanine')}
+
+for (i in benadryl$proteinType[1:5]){
+  getSummaries2(i,'benadryl')}
+
+for (i in beets$proteinType[1:5]){
+  getSummaries2(i,'beets')}
+
+for (i in beanSprouts$proteinType[1:5]){
+  getSummaries2(i,'bean sprouts')}
+
+for (i in beans$proteinType[1:5]){
+  getSummaries2(i,'beans')}
+
+for (i in bayLeaves$proteinType[1:5]){
+  getSummaries2(i,'bay leaves')}
+
+for (i in basil$proteinType[1:5]){
+  getSummaries2(i,'basil')}
+
+for (i in bananas$proteinType[1:5]){
+  getSummaries2(i,'bananas')}
+
+for (i in babyPowder$proteinType[1:5]){
+  getSummaries2(i,'baby powder')}
+
+for (i in arugula$proteinType[1]){
+  getSummaries2(i,'arugula')}
+
+for (i in anxiety$proteinType[1:5]){
+  getSummaries2(i,'anxiety')}
+
+
+```
+
+```{r}
+getGeneSummaries('blackberries')
+getGeneSummaries('birth contraceptive')
+getGeneSummaries('bht')
+getGeneSummaries('betaine anhydrous')
+getGeneSummaries('beta alanine')
+getGeneSummaries('benadryl')
+getGeneSummaries('beets')
+getGeneSummaries('bean sprouts')
+getGeneSummaries('beans')
+getGeneSummaries('bay leaves')
+getGeneSummaries('basil')
+getGeneSummaries('bananas')
+getGeneSummaries('baby powder')
+getGeneSummaries('arugula')
+getGeneSummaries('anxiety')
+
+```
+
+```{r}
+blackberriesSumms <- read.csv("proteinGeneSummaries_blackberries.csv")
+birthContraceptiveSumms <- read.csv("proteinGeneSummaries_birth-contraceptive.csv")
+bhtSumms <- read.csv("proteinGeneSummaries_bht.csv")
+betaineAnhydrousSumms <- read.csv("proteinGeneSummaries_betaine-anhydrous.csv")
+betaAlanineSumms <- read.csv("proteinGeneSummaries_beta-alanine.csv")
+benadrylSumms <- read.csv("proteinGeneSummaries_benadryl.csv")
+beetsSumms <- read.csv("proteinGeneSummaries_beets.csv")
+beanSproutsSumms <- read.csv("proteinGeneSummaries_bean-sprouts.csv")
+beansSumms <- read.csv("proteinGeneSummaries_beans.csv")
+bayLeavesSumms <- read.csv("proteinGeneSummaries_bay-leaves.csv")
+basilSumms <- read.csv("proteinGeneSummaries_basil.csv")
+bananasSumms <- read.csv("proteinGeneSummaries_bananas.csv")
+babyPowderSumms <- read.csv("proteinGeneSummaries_baby-powder.csv")
+arugulaSumms <- read.csv("proteinGeneSummaries_arugula.csv")
+anxietySumms <- read.csv("proteinGeneSummaries_anxiety.csv")
+
+```
+
+
+
+```{r}
+for (i in antipsychotics$proteinType[1:5]){
+  getSummaries2(i,'antipsychotics')}
+
+for (i in antihistamine$proteinType[1:5]){
+  getSummaries2(i,'antihistamine')}
+
+for (i in anise$proteinType[1:5]){
+  getSummaries2(i,'anise')}
+
+for (i in anesthesia$proteinType[1:5]){
+  getSummaries2(i,'anesthesia')}
+
+for (i in aminomethylPropanol$proteinType[1:5]){
+  getSummaries2(i,'aminomethyl propanol')}
+
+for (i in almonds$proteinType[1:5]){
+  getSummaries2(i,'almonds')}
+
+for (i in allylPentaerythritolCrosslinked$proteinType[1:4]){
+  getSummaries2(i,'allyl pentaerythritol crosslinked')}
+
+for (i in allegra$proteinType[1:5]){
+  getSummaries2(i,'allegra')}
+
+for (i in adaptogenBlend$proteinType[1]){
+  getSummaries2(i,'adaptogen blend')}
+
+for (i in acetylcholine$proteinType[1:5]){
+  getSummaries2(i,'acetylcholine')}
+
+for (i in acesulfamePotassium$proteinType[1:4]){
+  getSummaries2(i,'acesulfame potassium')}
+
+
+```
+
+```{r}
+find25genes('bacon')
+find25genes('cialis')
+find25genes('viagra')
+find25genes('erectile disfunction')
+find25genes('oysters')
+```
+
+```{r}
+getProteinGenes('bacon')
+getProteinGenes('cialis')
+getProteinGenes('viagra')
+getProteinGenes('erectile disfunction')
+getProteinGenes('oysters')
+```
+
+```{r}
+bacon <- read.csv("Top25bacons.csv")
+cialis <- read.csv("Top25cialiss.csv")
+viagra <- read.csv("Top25viagras.csv")
+erectileDisfunction <- read.csv("Top25erectile-disfunctions.csv")
+oysters <- read.csv('Top25oysterss.csv')
+```
+
+```{r}
+for (i in bacon$proteinType[1:5]){
+  getSummaries2(i,'bacon')
+}
+
+for (i in cialis$proteinType[1:5]){
+  getSummaries2(i,'cialis')
+}
+
+for (i in viagra$proteinType[1:5]){
+  getSummaries2(i,'viagra')
+}
+
+for (i in erectileDisfunction$proteinType[1:5]){
+  getSummaries2(i,'erectile disfunction')
+}
+
+for (i in oysters$proteinType[1:5]){
+  getSummaries2(i,'oysters')
+}
+```
+
+
+
+```{r}
+getGeneSummaries('antipsychotics')
+getGeneSummaries('antihistamine')
+getGeneSummaries('anise')
+getGeneSummaries('anesthesia')
+getGeneSummaries('aminomethyl propanol')
+getGeneSummaries('almonds')
+getGeneSummaries('allyl pentaerythritol crosslinked')
+getGeneSummaries('allegra')
+getGeneSummaries('adaptogen blend')
+getGeneSummaries('acetylcholine')
+getGeneSummaries('acesulfame potassium')
+getGeneSummaries('bacon')
+getGeneSummaries('cialis')
+getGeneSummaries('viagra')
+getGeneSummaries('erectile disfunction')
+getGeneSummaries('oysters')
+
+
+```
+
+```{r}
+antipsychoticsSumms <- read.csv("proteinGeneSummaries_antipsychotics.csv")
+antihistamineSumms <- read.csv("proteinGeneSummaries_antihistamine.csv")
+aniseSumms <- read.csv("proteinGeneSummaries_anise.csv")
+anesthesiaSumms <- read.csv("proteinGeneSummaries_anesthesia.csv")
+aminomethylPropanolSumms <- read.csv("proteinGeneSummaries_aminomethyl-propanol.csv")
+almondsSumms <- read.csv("proteinGeneSummaries_almonds.csv")
+allylPentaerythritolCrosslinkedSumms <- read.csv("proteinGeneSummaries_allyl-pentaerythritol-crosslinked.csv")
+allegraSumms <- read.csv("proteinGeneSummaries_allegra.csv")
+adaptogenBlendSumms <- read.csv("proteinGeneSummaries_adaptogen-blend.csv")
+acetycholineSumms <- read.csv("proteinGeneSummaries_acetylcholine.csv")
+acesulfamePotassiumSumms <- read.csv("proteinGeneSummaries_acesulfame-potassium.csv")
+baconSumms <- read.csv("proteinGeneSummaries_bacon.csv")
+cialisSumms <- read.csv("proteinGeneSummaries_cialis.csv")
+viagraSumms <- read.csv("proteinGeneSummaries_viagra.csv")
+erectileDisfunctionSumms <- read.csv("proteinGeneSummaries_erectile-disfunction.csv")
+oystersSumms <- read.csv("proteinGeneSummaries_oysters.csv")
+
+```
+
+```{r}
+newSystems <- rbind(antipsychoticsSumms, 
+antihistamineSumms ,
+aniseSumms ,
+anesthesiaSumms, 
+aminomethylPropanolSumms ,
+almondsSumms ,
+allylPentaerythritolCrosslinkedSumms, 
+allegraSumms ,
+adaptogenBlendSumms ,
+acetycholineSumms ,
+acesulfamePotassiumSumms ,
+baconSumms ,
+cialisSumms ,
+viagraSumms ,
+erectileDisfunctionSumms ,
+oystersSumms ,
+blackberriesSumms ,
+birthContraceptiveSumms ,
+bhtSumms ,
+betaineAnhydrousSumms ,
+betaAlanineSumms ,
+benadrylSumms ,
+beetsSumms ,
+beanSproutsSumms ,
+beansSumms ,
+bayLeavesSumms ,
+basilSumms ,
+bananasSumms, 
+babyPowderSumms ,
+arugulaSumms ,
+anxietySumms ,
+celerySumms ,
+cashewsSumms ,
+carrotsSumms ,
+carrageenanSumms ,
+carawaySumms ,
+candlesSumms ,
+cabbageSumms ,
+butaneSumms ,
+bugSpraySumms, 
+broccoliSproutsSumms ,
+broccoliSumms ,
+brazilNutsSumms, 
+bocChoiSumms ,
+blueberriesSumms ,
+blackEyedPeasSumms, 
+chamomileSumms ,
+cherriesSumms ,
+chestnutsSumms ,
+chlamydiaSumms ,
+chlorhexidineGluconateSumms ,
+chocolateSumms ,
+claritinSumms ,
+cocaineSumms ,
+coconutsSumms ,
+codeineSumms ,
+cornSumms ,
+cornNutsSumms ,
+cornStarchSumms, 
+cottonSumms ,
+cranberriesSumms ,
+fibromyalgiaSumms ,
+fennelSumms ,
+eucalyptusSumms ,
+ethanolSumms ,
+epsteinBarrSumms ,
+epinephrineSumms ,
+eggPlantSumms ,
+echinaceaSumms ,
+dmaaSumms ,
+dextrinSumms ,
+depressionSumms ,
+demerolSumms ,
+deetSumms ,
+datesSumms ,
+currySumms ,
+cryingSumms ,
+gunPowderSumms, 
+greenTeaSumms ,
+greenOnionsSumms ,
+greenBeansSumms ,
+grapefruitSumms ,
+gonorrheaSumms ,
+goldensealSumms ,
+glycerineSumms ,
+gluconolactoneSumms ,
+ginsengSumms ,
+gingkoBilobaSumms ,
+gingerSumms ,
+ghbSumms ,
+gelatinSumms ,
+garlicSumms ,
+flavanoidsSumms ,
+figsSumms ,
+hazelnutsSumms ,
+heroinSumms ,
+herpes1Summs ,
+herpes2Summs ,
+hydrogenatedCastorOilSumms ,
+hydrogenatedPalmOilGlycerideSumms ,
+hydroxyethylCelluloseSumms ,
+hydroxypropylCelluloseSumms ,
+incontinenceSumms ,
+isobutaneSumms ,
+isopropylMyristateSumms ,
+isopropylPalmitateSumms ,
+iudSumms ,
+jackfruitSumms ,
+jasmineSumms ,
+methylparabenSumms ,
+methSumms ,
+mdmaSumms ,
+matchesSumms ,
+mapleSyrupSumms ,
+mangoSumms ,
+malariaSumms, 
+magnesiumCarbonateSumms ,
+macadamiaNutsSumms ,
+limeSumms ,
+lentilsSumms ,
+lemonSumms ,
+latexSumms ,
+ketamineSumms ,
+kaleSumms ,
+miconazoleNitrateSumms ,
+milkProteinIsolateSumms ,
+mineralOilSumms ,
+monohydrateSumms ,
+mononucleosisSumms, 
+mushroomsSumms ,
+neuromaSumms ,
+nicotineSumms ,
+nitricOxideSumms ,
+norepinephrineSumms ,
+okraSumms ,
+onionsSumms, 
+opiatesSumms, 
+orangeSumms ,
+oreganoSumms ,
+polycarbophilSumms ,
+plumsSumms ,
+pistachioSumms ,
+pineNutsSumms ,
+pineappleSumms ,
+perfumeSumms ,
+pepperSpraySumms ,
+peppersSumms ,
+peppercornSumms ,
+peg8Summs ,
+pecansSumms, 
+peasSumms ,
+peanutsSumms ,
+parfumSumms ,
+papayaSeedsSumms ,
+papayaSumms ,
+polyesterSumms ,
+polyethyleneSumms ,
+polypropyleneSumms, 
+polyurethaneSumms ,
+propaneSumms ,
+propyleneGlycolSumms ,
+psychedelicSumms ,
+pumpkinSumms ,
+rayonSumms ,
+redFennelSumms ,
+redOnionsSumms ,
+rohypnolSumms ,
+rosemarySumms ,
+salmonSumms ,
+schisandraChinensisSumms ,
+sudafedSumms ,
+sucraloseSumms, 
+strawberriesSumms ,
+stJohnsWartSumms, 
+stearylAlcoholSumms ,
+starFruitSumms ,
+squashSumms ,
+spermicideSumms ,
+soyLecithinSumms ,
+soySumms ,
+sodiumHydroxideSumms ,
+sodiumBenzoateSumms ,
+siliconeSumms ,
+shinglesSumms ,
+sexLubricantSumms ,
+sesameSeedsSumms ,
+sunflowerSeedsSumms ,
+sweetPotatoSumms ,
+syphilisSumms ,
+talcSumms ,
+tanninsSumms ,
+tearGasSumms ,
+tuberculosisSumms ,
+turmericSumms ,
+turnipGreensSumms ,
+tylenolPMSumms ,
+vaginalDrynessSumms ,
+vicodineSumms ,
+visineSumms ,
+walnutsSumms ,
+watermelonSumms ,
+weedEaterSumms ,
+weedKillerSumms ,
+wheyProteinIsolateSumms ,
+xanaxSumms ,
+yamsSumms ,
+yeastInfectionSumms ,
+yerbaMateSumms ,
+yohimbeSumms ,
+zucchiniSumms 
+)
+colnames(newSystems)
+```
+
+```{r}
+previousBodySystems1 <- read.csv('bodySystems3.csv')
+colnames(previousBodySystems1)
+```
+
+
+```{r}
+newSystems2 <- newSystems[,c(2,1,3:5,6)]
+previousBodySystems <- previousBodySystems1[,c(1:6)]
+
+newSystems3 <- newSystems2[!duplicated(newSystems2),]
+```
+
+
+```{r}
+currentBodySystems <- rbind(previousBodySystems,
+                            newSystems3)
+```
+
+```{r}
+write.csv(currentBodySystems,'bodySystems4.csv',row.names = F)
+```
+
+
+
