@@ -2476,5 +2476,331 @@ currentBodySystems <- rbind(previousBodySystems,
 write.csv(currentBodySystems,'bodySystems4.csv',row.names = F)
 ```
 
+```{r}
+bs4 <- read.csv('bodySystems4.csv',sep=',',header=T,
+                na.strings=c('',' ','NA'),
+                stringsAsFactors = T)
+```
 
+Add more systems and networks of genes.
+```{r}
+find25genes('maca root')#vegetable root
+find25genes('preparation H')
+find25genes('cayenne pepper')
+find25genes('shell fish')
+find25genes('mercury')
+```
+
+```{r}
+getProteinGenes('maca root')
+getProteinGenes('preparation H')
+getProteinGenes('cayenne pepper')
+getProteinGenes('shell fish')
+getProteinGenes('mercury')
+```
+
+```{r}
+maca <- read.csv("Top25maca-roots.csv")
+prepH <- read.csv("Top25preparation-hs.csv")
+cayennePepper <- read.csv("Top25cayenne-peppers.csv")
+shellFish <- read.csv("Top25shell-fishs.csv")
+mercury <- read.csv("Top25mercurys.csv")
+```
+
+```{r}
+for (i in maca$proteinType[1:5]){
+  getSummaries2(i,'maca')
+}
+
+for (i in prepH$proteinType[1:10]){
+  getSummaries2(i,'preparation H')
+}
+
+for (i in cayennePepper$proteinType[1:3]){
+  getSummaries2(i,'cayenne pepper')
+}
+
+for (i in shellFish$proteinType[1:10]){
+  getSummaries2(i,'shell fish')
+}
+
+for (i in mercury$proteinType[1:10]){
+  getSummaries2(i,'mercury')
+}
+
+```
+
+
+```{r}
+getGeneSummaries('maca')
+getGeneSummaries('preparation H')
+getGeneSummaries('cayenne pepper')
+getGeneSummaries('shell fish')
+getGeneSummaries('mercury')
+
+```
+
+
+```{r}
+macaSumms <- read.csv("proteinGeneSummaries_maca.csv")
+prepHSumms <- read.csv("proteinGeneSummaries_preparation-h.csv")
+cayennePepperSumms <- read.csv("proteinGeneSummaries_cayenne-pepper.csv")
+shellFishSumms <- read.csv("proteinGeneSummaries_shell-fish.csv")
+mercurySumms <- read.csv("proteinGeneSummaries_mercury.csv")
+
+
+```
+
+
+```{r}
+newer <- rbind(macaSumms, prepHSumms,cayennePepperSumms,
+               shellFishSumms,mercurySumms)
+```
+
+
+```{r}
+newer2 <- newer[!duplicated(newer),]
+colnames(newer2)
+colnames(bs4)
+```
+
+
+```{r}
+newer3 <- newer2[,c(2,1,4:6,3)]
+```
+
+
+```{r}
+bs5 <- rbind(newer3,bs4)
+```
+
+
+```{r}
+write.csv(bs5,'bodySystems5.csv',row.names=F)
+```
+
+
+```{r}
+bs5 <- read.csv('bodySystems5.csv',sep=',',
+                header=T, na.strings=c('',' ','NA'))
+
+```
+
+
+```{r}
+source('geneCards2.R')
+```
+
+
+```{r}
+find25genes('zofran') #treat nausea
+find25genes('zantac') #treat stomach acide
+find25genes('antiemetics')  #treat nausea
+find25genes('antacids') #treat indigestion
+find25genes('antipyretics')  #fever reducer
+find25genes('sedatives')
+find25genes('valium') #treat anxiety
+find25genes('soma') #muscle relaxer that blocks pain bw brain and nerves
+find25genes('hpv') #human papilloma virus
+find25genes('blood thinners') #treat DVT or PE
+find25genes('beta blockers') #treat high blood pressure and heart arythmia
+```
+
+```{r}
+getProteinGenes('zofran')
+getProteinGenes('zantac')
+getProteinGenes('antiemetics')
+getProteinGenes('antacids')
+getProteinGenes('sedatives')
+getProteinGenes('valium')
+getProteinGenes('soma')
+getProteinGenes('hpv')
+getProteinGenes('blood thinners')
+getProteinGenes('beta blockers')
+getProteinGenes('antipyretics')
+
+
+```
+
+```{r}
+zofran <- read.csv("Top25zofrans.csv")
+zantac <- read.csv("Top25zantacs.csv")
+antiemetics <- read.csv("Top25antiemeticss.csv")
+antacids <- read.csv("Top25antacidss.csv")
+sedatives <- read.csv("Top25sedativess.csv")
+valium <- read.csv("Top25valiums.csv")
+soma <- read.csv("Top25somas.csv")
+hpv <- read.csv("Top25hpvs.csv")
+bloodThinners <- read.csv("Top25blood-thinnerss.csv")
+betaBlockers <- read.csv("Top25beta-blockerss.csv")
+antipyretics <- read.csv("Top25antipyreticss.csv")
+
+
+```
+
+```{r}
+for (i in zofran$proteinType[1:5]){
+  getSummaries2(i,'zofran')
+}
+for (i in zantac$proteinType[1:5]){
+  getSummaries2(i,'zantac')
+}
+for (i in valium$proteinType[1:5]){
+  getSummaries2(i,'valium')
+}
+for (i in soma$proteinType[1:5]){
+  getSummaries2(i,'soma')
+}
+for (i in sedatives$proteinType[1:5]){
+  getSummaries2(i,'sedatives')
+}
+for (i in hpv$proteinType[1:5]){
+  getSummaries2(i,'hpv')
+}
+for (i in bloodThinners$proteinType[1:5]){
+  getSummaries2(i,'blood thinners')
+}
+for (i in betaBlockers$proteinType[1:5]){
+  getSummaries2(i,'beta blockers')
+}
+for (i in antipyretics$proteinType[1:5]){
+  getSummaries2(i,'antipyretics')
+}
+for (i in antiemetics$proteinType[1:5]){
+  getSummaries2(i,'antiemetics')
+}
+for (i in antacids$proteinType[1:5]){
+  getSummaries2(i,'antacids')
+}
+
+```
+
+```{r}
+getGeneSummaries('zofran')
+getGeneSummaries('antiemetics')
+getGeneSummaries('antipyretics')
+getGeneSummaries('beta blockers')
+getGeneSummaries('blood thinners')
+getGeneSummaries('hpv')
+getGeneSummaries('sedatives')
+getGeneSummaries('soma')
+getGeneSummaries('valium')
+getGeneSummaries('zantac')
+getGeneSummaries('zofran')
+```
+
+```{r}
+zofranSumms <- read.csv("proteinGeneSummaries_zofran.csv")
+antiemeticsSumms <- read.csv("proteinGeneSummaries_antiemetics.csv")
+antipyreticsSumms <- read.csv("proteinGeneSummaries_antipyretics.csv")
+betaBlockersSumms <- read.csv("proteinGeneSummaries_beta-blockers.csv")
+bloodThinnersSumms <- read.csv("proteinGeneSummaries_blood-thinners.csv")
+hpvSumms <- read.csv("proteinGeneSummaries_hpv.csv")
+sedativesSumms <- read.csv("proteinGeneSummaries_sedatives.csv")
+somaSumms <- read.csv("proteinGeneSummaries_soma.csv")
+valiumSumms <- read.csv("proteinGeneSummaries_valium.csv")
+zantacSumms <- read.csv("proteinGeneSummaries_zantac.csv")
+zofranSumms <- read.csv("proteinGeneSummaries_zofran.csv")
+
+
+```
+
+```{r}
+summs <- rbind(zofranSumms, antiemeticsSumms, antipyreticsSumms,
+               betaBlockersSumms,bloodThinnersSumms,hpvSumms,
+               sedativesSumms,somaSumms,valiumSumms,zantacSumms,
+               zofranSumms)
+```
+
+
+```{r}
+colnames(bs5)
+colnames(summs)
+```
+
+```{r}
+summs1 <- summs[,c(2,1,4:6,3)]
+
+bs6 <- rbind(summs1,bs5)
+
+write.csv(bs6,'bodySystems6.csv',row.names=F)
+```
+
+Add saffron, an herb for teas and blood boosting immunity.
+```{r}
+find25genes('saffron')
+getProteinGenes('saffron')
+
+```
+
+```{r}
+saffron <- read.csv('Top25saffrons.csv')
+for (i in saffron$proteinType[1:5]){
+  getSummaries2(i,'saffron')
+}
+getGeneSummaries('saffron')
+saffronSumms <- read.csv("proteinGeneSummaries_saffron.csv")
+colnames(saffronSumms)
+saffronSumms2 <- saffronSumms[,c(2,1,4:6,3)]
+colnames(bs6) <- colnames(saffronSumms2)
+bs7 <- rbind(saffronSumms2,bs6)
+write.csv(bs7,'bodySystems7.csv',row.names=F)
+```
+
+```{r}
+bs7 <- read.csv('bodySystems7.csv',sep=',',header=T,
+                na.strings=c('',' ','NA'))
+            
+```
+
+
+```{r}
+find25genes('chick peas')
+getProteinGenes('chick peas')
+
+chickPeas <- read.csv('Top25chick-peass.csv')
+for (i in chickPeas$proteinType[1:5]){
+  getSummaries2(i,'chick peas')
+}
+getGeneSummaries('chick peas')
+chickPeasSumms <- read.csv("proteinGeneSummaries_chick-peas.csv")
+colnames(chickPeasSumms)
+chickPeasSumms2 <- chickPeasSumms[,c(2,1,4:6,3)]
+
+
+find25genes('antiangiogenics')
+getProteinGenes('antiangiogenics')
+
+antiangiogenics <- read.csv('Top25antiangiogenicss.csv')
+for (i in antiangiogenics$proteinType[1:5]){
+  getSummaries2(i,'antiangiogenics')
+}
+getGeneSummaries('antiangiogenics')
+antiangiogenicsSumms <- read.csv("proteinGeneSummaries_antiangiogenics.csv")
+colnames(antiangiogenicsSumms)
+antiangiogenicsSumms2 <- antiangiogenicsSumms[,c(2,1,4:6,3)]
+
+
+find25genes('avocado')
+getProteinGenes('avocado')
+
+avocado <- read.csv('Top25avocados.csv')
+for (i in avocado$proteinType[1:5]){
+  getSummaries2(i,'avocado')
+}
+getGeneSummaries('avocado')
+avocadoSumms <- read.csv("proteinGeneSummaries_avocado.csv")
+colnames(avocadoSumms)
+avocadoSumms2 <- avocadoSumms[,c(2,1,4:6,3)]
+
+
+
+
+```
+
+```{r}
+colnames(bs7) <- colnames(chickPeasSumms2)
+bs8 <- rbind(chickPeasSumms2,avocadoSumms2,antiangiogenicsSumms2, bs7)
+write.csv(bs8,'bodySystems8.csv',row.names=F)
+```
 

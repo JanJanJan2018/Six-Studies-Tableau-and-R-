@@ -577,6 +577,13 @@ IBS <- uccb2d
 UL_study1 <- UL_study1c
 UL_study2 <- UL_study2c 
 
+write.csv(covid19,'covid19.csv',row.names=F)
+write.csv(LymeDisease,'LymeDisease.csv',row.names=F)
+write.csv(RheumatoidArthritis,'RheumatoidArthritis.csv',row.names=F)
+write.csv(IBS,'IBS.csv',row.names=F)
+write.csv(UL_study1,'UL_study1.csv',row.names=F)
+write.csv(UL_study2,'UL_study2.csv',row.names=F)
+
 ```
 
 
@@ -592,10 +599,36 @@ colnames(UL_study2)
 ```
 
 
+***
+
+Next, assume you closed the file or returning to it later with all objects emptied in environment and want to start with the preprocessed files and a new system data frame to merge and combine gene data.
 ```{r}
-systemGenes <- read.csv('bodySystems4.csv')#more genes added 9/13/2020
+systemGenes <- read.csv('bodySystems8.csv') #added 9/16/2020
+
+#systemGenes <- read.csv('bodySystems7.csv') #added 9/15/2020
+
+#systemGenes <- read.csv('bodySystems6.csv') #added 9/15/2020
+#systemGenes <- read.csv('bodySystems5.csv')#more genes added 9/14/2020
+
+#systemGenes <- read.csv('bodySystems4.csv')#more genes added 9/13/2020
 #systemGenes <- read.csv('bodySystems3.csv')
 ```
+
+```{r}
+covid19 <- read.csv('covid19.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+IBS <- read.csv('IBS.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+LymeDisease <- read.csv('LymeDisease.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+RheumatoidArthritis <- read.csv('RheumatoidArthritis.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+UL_study1 <- read.csv('UL_study1.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+UL_study2 <- read.csv('UL_study2.csv',sep=',',header=T,
+                    na.strings=c('',' ','NA'),stringsAsFactors=T)
+```
+
 
 
 ```{r}
@@ -672,6 +705,12 @@ unique(sixStudiesAndSystemGenes$researchStudy)
 ```{r,eval=F}
 write.csv(sixStudiesAndSystemGenes,'sixStudiesGatheredFCsGrouped.csv',row.names=F)
 ```
+
+```{r}
+write.csv(sixStudiesAndSystemGenes[,-c(4:5)],'sixStudiesGatheredFCsGrouped_1summ.csv',row.names=F)
+
+```
+
 
 I created a dashboard in Tableau that is available to explore on 
 <a href='https://public.tableau.com/profile/janis5126#!/vizhome/SixResearchStudiesCompared/SixResearchStudiesCompared?publish=yes' target='blank'>public.tableau.com</a>.
